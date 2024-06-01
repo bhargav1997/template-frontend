@@ -6,30 +6,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BrickMMO Console</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body>
-    
-    <!-- <nav class="w3-bar w3-black">
+<body style="*{ margin: 0; padding: 0;}">
 
-        <a href="https://branding.brickmmo.com/icons" class="">
-            <i class="fa fa-search" style="width: 44px;"></i>
+    <!-- Navigation bar -->
+    <nav class=" w3-bar w3-light-grey">
+
+        <!-- App Menu -->
+        <div>
+            <button class="w3-bar-item w3-button w3-red" onclick="w3_open()">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+
+        <div class="w3-sidebar w3-bar-block w3-border-right w3-animate-left" style="display:none" id="mySidebar">
+            <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+            <a href="#" class="w3-bar-item w3-button">App 1</a>
+            <a href="#" class="w3-bar-item w3-button">App 2</a>
+            <a href="#" class="w3-bar-item w3-button">App 3</a>
+        </div>
+
+        <script>
+            function w3_open() {
+                document.getElementById("mySidebar").style.display = "block";
+            }
+
+            function w3_close() {
+                document.getElementById("mySidebar").style.display = "none";
+            }
+        </script>
+
+
+
+        <!-- BrickMMO logo -->
+        <div class="w3-padding w3-bar-item w3-button" style="padding: -20;">
+            <img src="./assets/media/images/BrickMMO Logo.png" alt="BrickMMO logo" style="width: 80px;">
+        </div>
+
+
+
+        <!-- Select City -->
+        <button onclick="document.getElementById('selectCity').style.display='block'"
+            class="w3-padding w3-bar-item w3-button">
+            Select City <i class="fa-solid fa-chevron-down"></i>
+        </button>
+
+
+
+        <!-- Profile -->
+        <a href="" class="w3-padding w3-bar-item w3-button w3-display-topright">
+            Profile
         </a>
 
-        <a href="" class="">
-            <img src="https://branding.brickmmo.com/png/BrickMMO_Logo_Coloured_Horizontal.png" style="height: 44px; width: auto;"
-        </a>
-
-        <a href="" class="">
-
-        </a>
-
-        <a href="" class="">
-
-        </a>
 
 
-    </nav> -->
+        <!-- Select City Modal -->
+        <section id="selectCity" class="w3-modal">
+            <div class="w3-modal-content w3-animate-top">
+
+                <header class="w3-container w3-light-grey">
+                    <span onclick="document.getElementById('selectCity').style.display='none'"
+                        class="w3-button w3-display-topright">&times;</span>
+                    <p>Switch City</p>
+                </header>
+
+                <div class="w3-padding">
+                    <div class="w3-container w3-margin w3-padding w3-dark-grey">
+                        Select City
+                    </div>
+
+                    <div class="w3-container w3-margin-bottom">
+                        <a href="#" class="w3-button w3-block w3-left-align">City 1</a>
+                        <a href="#" class="w3-button w3-block w3-left-align">City 2</a>
+                        <a href="#" class="w3-button w3-block w3-left-align">City 3</a>
+                        <a href="#" class="w3-button w3-block w3-left-align">City 4</a>
+                        <a href="#" class="w3-button w3-block w3-left-align">City 5</a>
+                        <a href="#" class="w3-button w3-block w3-left-align">City 6</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </nav>
+
+
 
     <main>
 
@@ -41,7 +104,9 @@
             </h1>
 
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac
+                aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+                himenaeos.
             </p>
 
         </section>
@@ -51,11 +116,12 @@
 
             <h2 class="w3-left-align w3-margin">Apps</h2>
 
-            <div class="w3-center">
+            <div class="w3-center" style="display: flex; flex-wrap: wrap; justify-content: center;">
 
 
                 <a href="https://brickmmo.com/">
-                    <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin" style="width: 250px; height: 250px;  height: 250px;">
+                    <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin"
+                        style="width: 250px; height: 250px;  height: 250px;">
                         <img src="https://branding.brickmmo.com/icons/png/1_Brix.png" alt="" style="width: 200px;">
                         <div class="w3-container w3-center">
                             <p>BrikX</p>
@@ -65,7 +131,8 @@
 
                 <a href="https://brickmmo.com/">
                     <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin" style="width: 250px; height: 250px; ">
-                        <img src="https://branding.brickmmo.com/icons/png/2_Navigation.png" alt="" style="width: 200px;">
+                        <img src="https://branding.brickmmo.com/icons/png/2_Navigation.png" alt=""
+                            style="width: 200px;">
                         <div class="w3-container w3-center">
                             <p>Navigation</p>
                         </div>
@@ -92,7 +159,8 @@
 
                 <a href="https://brickmmo.com/">
                     <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin" style="width: 250px; height: 250px; ">
-                        <img src="https://branding.brickmmo.com/icons/png/5_Radio_Station.png" alt="" style="width: 200px;">
+                        <img src="https://branding.brickmmo.com/icons/png/5_Radio_Station.png" alt=""
+                            style="width: 200px;">
                         <div class="w3-container w3-center">
                             <p>Radio Station</p>
                         </div>
@@ -110,7 +178,8 @@
 
                 <a href="https://brickmmo.com/">
                     <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin" style="width: 250px; height: 250px; ">
-                        <img src="https://branding.brickmmo.com/icons/png/7_Pick_A_Brick.png" alt="" style="width: 200px;">
+                        <img src="https://branding.brickmmo.com/icons/png/7_Pick_A_Brick.png" alt=""
+                            style="width: 200px;">
                         <div class="w3-container w3-center">
                             <p>Pick A Brick</p>
                         </div>
@@ -137,7 +206,8 @@
 
                 <a href="https://brickmmo.com/">
                     <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin" style="width: 250px; height: 250px; ">
-                        <img src="https://branding.brickmmo.com/icons/png/10_Power_Grid.png" alt="" style="width: 200px;">
+                        <img src="https://branding.brickmmo.com/icons/png/10_Power_Grid.png" alt=""
+                            style="width: 200px;">
                         <div class="w3-container w3-center">
                             <p>Power Grid</p>
                         </div>
@@ -146,7 +216,8 @@
 
                 <a href="https://brickmmo.com/">
                     <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin" style="width: 250px; height: 250px; ">
-                        <img src="https://branding.brickmmo.com/icons/png/11_Control_Panel.png" alt="" style="width: 200px;">
+                        <img src="https://branding.brickmmo.com/icons/png/11_Control_Panel.png" alt=""
+                            style="width: 200px;">
                         <div class="w3-container w3-center">
                             <p>Control Panel</p>
                         </div>
@@ -166,14 +237,15 @@
                     <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin" style="width: 250px; height: 250px; ">
                         <img src="https://branding.brickmmo.com/icons/png/13_Timesheets.png" alt="" style="width: 200px;">
                         <div class="w3-container w3-center">
-                            <pTimesheets></p>
+                            <p>Timesheets</p>
                         </div>
                     </section>
                 </a>
 
                 <a href="https://brickmmo.com/">
                     <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin" style="width: 250px; height: 250px; ">
-                        <img src="https://branding.brickmmo.com/icons/png/14_BrickOverflow.png" alt="" style="width: 200px;">
+                        <img src="https://branding.brickmmo.com/icons/png/14_BrickOverflow.png" alt=""
+                            style="width: 200px;">
                         <div class="w3-container w3-center">
                             <p>Brick Overflow</p>
                         </div>
