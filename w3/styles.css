@@ -1,0 +1,39 @@
+.w3-orange {
+  background-color: #ff5b00 !important;
+}
+.w3-red {
+  background-color: #ff0000 !important;
+}
+.w3-grey,
+.w3-gray {
+  background-color: #848484 !important;
+}
+.w3-text-orange {
+  color: #ff5b00 !important;
+}
+.w3-text-red {
+  color: #ff0000 !important;
+}
+.w3-text-grey,
+.w3-text-gray {
+  color: #848484 !important;
+}
+.w3-border-red {
+  border-color: #ff5b00 !important;
+}
+.w3-border-red {
+  border-color: #ff0000 !important;
+}
+.w3-border-grey,
+.w3-border-gray {
+  border-color: #848484 !important;
+}
+
+a:link,
+a:active,
+a:visited {
+  color: #ff5b00 !important;
+}
+a:hover {
+  color: #ff0000 !important;
+}
