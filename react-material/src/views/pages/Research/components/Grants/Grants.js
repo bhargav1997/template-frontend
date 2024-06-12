@@ -18,7 +18,7 @@ const Grants = () => {
       <SectionFlag>Grants</SectionFlag>
       <SectionTitle>Research Funding</SectionTitle>
       <SectionSubTitle>
-        BrickMMO has received funding from{' '}
+        Custom Template has received funding from{' '}
         <Link to="https://humber.ca/research/sotl" component={LinkRouter}>
           Cultivate
         </Link>

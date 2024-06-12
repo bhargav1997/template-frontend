@@ -43,7 +43,7 @@ const Technology = () => {
         <Grid item xs={12} md={6} container alignItems="center">
           <Box marginBottom={2}>
             <Typography variant="h4" fontWeight={700} gutterBottom>
-              BrickMMO has 50+ systems
+              Custom Template has 50+ systems
             </Typography>
             <Typography color="text.secondary" gutterBottom>
               From documentation, to small online tools, admin control panels,

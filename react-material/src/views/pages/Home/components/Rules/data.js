@@ -10,7 +10,7 @@ export const faqs = [
     subtitle: (
       <Box>
         <Typography component="p" marginBottom={1}>
-          LEGO® does not make cameras, but they are crucial to many BrickMMO
+          LEGO® does not make cameras, but they are crucial to many Custom Template
           systems including{' '}
           <Link to="/systems-gps" underline="none">
             GPS
@@ -26,7 +26,7 @@ export const faqs = [
           , and more.
         </Typography>
         <Typography component="p">
-          BrickMMO uses the{' '}
+          Custom Template uses the{' '}
           <Link to="https://pixycam.com/pixy2/" underline="none">
             Pixy2
           </Link>{' '}
@@ -46,7 +46,7 @@ export const faqs = [
           must be free of cables.
         </Typography>
         <Typography component="p">
-          BrickMMO has developed inductive charging adaptors compatible with
+          Custom Template has developed inductive charging adaptors compatible with
           LEGO® SPIKE™ and MINDSTORMS® hubs. View the{' '}
           <Link to="/systems-inductive-charging">Inductive Charging</Link>{' '}
           system for more information.

@@ -35,7 +35,7 @@ const Hero = () => {
                 component={'span'}
                 variant={'inherit'}
               >
-                Redeveloping real world systems into the BrickMMO world!
+                Redeveloping real world systems into the Custom Template world!
               </Typography>
             </Typography>
           </Box>

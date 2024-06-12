@@ -26,7 +26,7 @@ const Counter = () => {
         {
           number: 70,
           title: 'Student Contribution',
-          subtitle: '70% of BrickMMO code was written by students.',
+          subtitle: '70% of Custom Template code was written by students.',
           suffix: '%',
         },
         {

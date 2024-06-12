@@ -55,14 +55,14 @@ const Rules = () => {
     <Box id="rules">
       <Box marginBottom={4}>
         <SectionFlag>Rules and Exceptions</SectionFlag>
-        <SectionTitle>Rules of BrickMMO</SectionTitle>
+        <SectionTitle>Rules of Custom Template</SectionTitle>
         <Typography
           component="p"
           color="textSecondary"
           align="center"
           marginBottom={2}
         >
-          Unless absolutely impossible, everything in BrickMMO is built with
+          Unless absolutely impossible, everything in Custom Template is built with
           100% LEGO® bricks. Each decision to integrate a non LEGO® brand
           component was made with great difficulty!
         </Typography>

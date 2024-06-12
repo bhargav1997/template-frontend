@@ -69,7 +69,7 @@ export const systems = [
   },
   {
     title: 'Places',
-    subtitle: 'A searchable directory of locations in a BrickMMO city.',
+    subtitle: 'A searchable directory of locations in a Custom Template city.',
     link: {
       text: 'Places Details',
       url: '/systems-places',
@@ -80,7 +80,7 @@ export const systems = [
   {
     title: 'Streetview',
     subtitle:
-      'A navigation tool allowing visitors to virtually navigate a BrickMMO city.',
+      'A navigation tool allowing visitors to virtually navigate a Custom Template city.',
     link: {
       text: 'Streetview Details',
       url: '/systems-streetview',
@@ -91,7 +91,7 @@ export const systems = [
   {
     title: 'CLI',
     subtitle:
-      'A Command Line Interface (CLI) tool to manage a BrickMMO city from a terminal.',
+      'A Command Line Interface (CLI) tool to manage a Custom Template city from a terminal.',
     link: {
       text: 'CLI Details',
       url: '/systems-cli',
@@ -123,7 +123,7 @@ export const systems = [
   },
   {
     title: 'Bricker',
-    subtitle: 'A Twitter/X like social media website for BrickMMO robots.',
+    subtitle: 'A Twitter/X like social media website for Custom Template robots.',
     link: {
       text: 'Bricker Details',
       url: '/systems-bricker',
@@ -133,7 +133,7 @@ export const systems = [
   },
   {
     title: 'Branding',
-    subtitle: 'Assets and guidelines for the BrickMMO brand.',
+    subtitle: 'Assets and guidelines for the Custom Template brand.',
     link: {
       text: 'Branding Details',
       url: '/systems-branding',

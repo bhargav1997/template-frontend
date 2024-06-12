@@ -126,7 +126,7 @@ const GetStarted = () => {
                 marginBottom={2}
               >
                 We will be inviting other developers to collaborate on the
-                BrickMMO project soon! Signup for our emails newsletter to be
+                Custom Template project soon! Signup for our emails newsletter to be
                 notified.
               </Typography>
               <form noValidate autoComplete="off">
@@ -222,21 +222,21 @@ const GetStarted = () => {
                 </IconButton>
                 <IconButton
                   component={LinkRouter}
-                  to="https://twitter.com/brickmmo"
+                  to="https://twitter.com/Custom Template"
                   marginRight={1}
                 >
                   <TwitterIcon color="primary" />
                 </IconButton>
                 <IconButton
                   component={LinkRouter}
-                  to="https://github.com/BrickMMO"
+                  to="https://github.com/Custom Template"
                   marginRight={1}
                 >
                   <GitHubIcon color="primary" />
                 </IconButton>
                 <IconButton
                   component={LinkRouter}
-                  to="https://www.tiktok.com/@brickmmo"
+                  to="https://www.tiktok.com/@Custom Template"
                   marginRight={1}
                 >
                   <TikTokIcon

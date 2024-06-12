@@ -15,7 +15,7 @@ const Test = () => {
     <Box>
       <SectionFlag>Multi Disciplinary</SectionFlag>
       <SectionTitle>Cross Program Collaboration</SectionTitle>
-      <SectionSubTitle>10+ programs contributing to BrickMMO:</SectionSubTitle>
+      <SectionSubTitle>10+ programs contributing to Custom Template:</SectionSubTitle>
       <SectionButtonList data={programs} />
       <SectionImageList data={images} />
     </Box>

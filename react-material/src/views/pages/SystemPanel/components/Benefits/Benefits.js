@@ -14,7 +14,7 @@ const Benefits = () => {
     <Box>
       <SectionFlag>Sponsorship Benefits</SectionFlag>
       <SectionTitle>
-        BrickMMO was Developed out of a Desire to Teach Code Differently
+        Custom Template was Developed out of a Desire to Teach Code Differently
       </SectionTitle>
       <SectionSubTitle>
         Providing students with a real world sandbox to apply:
