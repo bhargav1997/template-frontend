@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome | BrickMMO Console</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+
+<body>
+
+    <nav class="w3-bar w3-border-bottom w3-padding w3-top" style="position: sticky;">
+        <div class="w3-row">
+            <div class="w3-col s6">
+
+                <button class="w3-button" onclick="w3_toggle()">
+                    <i class="fa-solid fa-bars"></i>
+                </button>   
+
+                <script>
+
+                window.onload = (event) => {
+                    let sidebar = document.getElementById("sidebar");
+                    let width = sidebar.getBoundingClientRect().width;
+                    sidebar.style.left = "-"+width+"px";
+                };
+
+                function w3_toggle() {
+                    let sidebar = document.getElementById("sidebar");
+                    let width = sidebar.getBoundingClientRect().width;
+
+                    sidebar.style.transition = "0.5s";
+
+                    console.log(sidebar.style.left + ' - ' + width);
+                    if(sidebar.style.left == "0px")
+                    {
+                        console.log('in');
+                        sidebar.style.left = "-"+width+"px";
+                    }
+                    else
+                    {
+                        console.log('out');
+                        sidebar.style.left = "0px";
+                    }
+                }
+                
+                </script>
+
+                <a href="/" class=" w3-margin-left"><img src="images/brickmmo_logo.png" style="height: 35px" /></a>
+
+                <button class="w3-border w3-border-gray w3-button w3-margin-left">
+                    <i class="fa-solid fa-city"></i>
+                    Smart City
+                    <i class="fa-solid fa-caret-down"></i>
+                </button>
+                
+            </div>
+            <div class="w3-col s6" style="text-align: right;">
+              
+                <img src="/images/profile.jpg" style="height: 35px" class="w3-circle" />
+
+                <button class="w3-button" onclick="w3_toggle()">
+                    <i class="fa-solid fa-grip-vertical"></i>
+                </button>
+
+            </div>
+          </div>
+    </nav>
+
+    <nav class="w3-sidebar w3-bar-block w3-border-right w3-border-gray" id="sidebar" style="width: 100%; max-width: 250px; left:-250px;">
+        
+        <a href="#" class="w3-bar-item w3-button">Link 1</a>
+  <button class="w3-button w3-block w3-left-align" onclick="myAccFunc()">
+  Accordion <i class="fa fa-caret-down"></i>
+  </button>
+  <div id="demoAcc" class="w3-hide w3-white w3-card">
+    <a href="#" class="w3-bar-item w3-button">Link</a>
+    <a href="#" class="w3-bar-item w3-button">Link</a>
+  </div>
+
+  <div class="w3-dropdown-click">
+    <button class="w3-button" onclick="myDropFunc()">
+      Dropdown <i class="fa fa-caret-down"></i>
+    </button>
+    <div id="demoDrop" class="w3-dropdown-content w3-bar-block w3-white w3-card">
+      <a href="#" class="w3-bar-item w3-button">Link</a>
+      <a href="#" class="w3-bar-item w3-button">Link</a>
+    </div>
+  </div>
+  <a href="#" class="w3-bar-item w3-button">Link 2</a>
+  <a href="#" class="w3-bar-item w3-button">Link 3</a>
+  
+    </nav>
+
+
+
+
+        <!-- Select City Modal -->
+        <section id="selectCity" class="w3-modal">
+            <div class="w3-modal-content w3-animate-top">
+
+                <header class="w3-container w3-light-grey">
+                    <span onclick="document.getElementById('selectCity').style.display='none'"
+                        class="w3-button w3-display-topright">&times;</span>
+                    <p>Switch City</p>
+                </header>
+
+                <div class="w3-padding">
+                    <div class="w3-container w3-margin w3-padding w3-dark-grey">
+                        Select City
+                    </div>
+
+                    <div class="w3-container w3-margin-bottom">
+                        <a href="#" class="w3-button w3-block w3-left-align">City 1</a>
+                        <a href="#" class="w3-button w3-block w3-left-align">City 2</a>
+                        <a href="#" class="w3-button w3-block w3-left-align">City 3</a>
+                        <a href="#" class="w3-button w3-block w3-left-align">City 4</a>
+                        <a href="#" class="w3-button w3-block w3-left-align">City 5</a>
+                        <a href="#" class="w3-button w3-block w3-left-align">City 6</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </nav>
+
+
+
+    <main>
+
+        <!-- Welcome message -->
+        <section class="w3-container w3-center w3-deep-orange">
+
+            <h1>
+                Welcome to BrickMMO Console
+            </h1>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac
+                aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+                himenaeos.
+            </p>
+
+        </section>
+
+        <!-- Apps section -->
+        <section class="w3-container">
+
+            <h2 class="w3-left-align w3-margin">Apps</h2>
+
+            <div class="w3-center" style="display: flex; flex-wrap: wrap; justify-content: center;">
+
+
+                <a href="https://brickmmo.com/">
+                    <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin"
+                        style="width: 250px; height: 250px;  height: 250px;">
+                        <img src="https://branding.brickmmo.com/icons/png/1_Brix.png" alt="" style="width: 200px;">
+                        <div class="w3-container w3-center">
+                            <p>BrikX</p>
+                        </div>
+                    </section>
+                </a>
+
+                <a href="https://brickmmo.com/">
+                    <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin" style="width: 250px; height: 250px; ">
+                        <img src="https://branding.brickmmo.com/icons/png/2_Navigation.png" alt=""
+                            style="width: 200px;">
+                        <div class="w3-container w3-center">
+                            <p>Navigation</p>
+                        </div>
+                    </section>
+                </a>
+
+                <a href="https://brickmmo.com/">
+                    <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin" style="width: 250px; height: 250px; ">
+                        <img src="https://branding.brickmmo.com/icons/png/3_Flow.png" alt="" style="width: 200px;">
+                        <div class="w3-container w3-center">
+                            <p>Flow</p>
+                        </div>
+                    </section>
+                </a>
+
+                <a href="https://brickmmo.com/">
+                    <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin" style="width: 250px; height: 250px; ">
+                        <img src="https://branding.brickmmo.com/icons/png/4_Events.png" alt="" style="width: 200px;">
+                        <div class="w3-container w3-center">
+                            <p>Events</p>
+                        </div>
+                    </section>
+                </a>
+
+                <a href="https://brickmmo.com/">
+                    <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin" style="width: 250px; height: 250px; ">
+                        <img src="https://branding.brickmmo.com/icons/png/5_Radio_Station.png" alt=""
+                            style="width: 200px;">
+                        <div class="w3-container w3-center">
+                            <p>Radio Station</p>
+                        </div>
+                    </section>
+                </a>
+
+                <a href="https://brickmmo.com/">
+                    <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin" style="width: 250px; height: 250px; ">
+                        <img src="https://branding.brickmmo.com/icons/png/6_Train.png" alt="" style="width: 200px;">
+                        <div class="w3-container w3-center">
+                            <p>Train</p>
+                        </div>
+                    </section>
+                </a>
+
+                <a href="https://brickmmo.com/">
+                    <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin" style="width: 250px; height: 250px; ">
+                        <img src="https://branding.brickmmo.com/icons/png/7_Pick_A_Brick.png" alt=""
+                            style="width: 200px;">
+                        <div class="w3-container w3-center">
+                            <p>Pick A Brick</p>
+                        </div>
+                    </section>
+                </a>
+
+                <a href="https://brickmmo.com/">
+                    <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin" style="width: 250px; height: 250px; ">
+                        <img src="https://branding.brickmmo.com/icons/png/8_Colours.png" alt="" style="width: 200px;">
+                        <div class="w3-container w3-center">
+                            <p>Colours</p>
+                        </div>
+                    </section>
+                </a>
+
+                <a href="https://brickmmo.com/">
+                    <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin" style="width: 250px; height: 250px; ">
+                        <img src="https://branding.brickmmo.com/icons/png/9_Parts.png" alt="" style="width: 200px;">
+                        <div class="w3-container w3-center">
+                            <p>Parts</p>
+                        </div>
+                    </section>
+                </a>
+
+                <a href="https://brickmmo.com/">
+                    <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin" style="width: 250px; height: 250px; ">
+                        <img src="https://branding.brickmmo.com/icons/png/10_Power_Grid.png" alt=""
+                            style="width: 200px;">
+                        <div class="w3-container w3-center">
+                            <p>Power Grid</p>
+                        </div>
+                    </section>
+                </a>
+
+                <a href="https://brickmmo.com/">
+                    <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin" style="width: 250px; height: 250px; ">
+                        <img src="https://branding.brickmmo.com/icons/png/11_Control_Panel.png" alt=""
+                            style="width: 200px;">
+                        <div class="w3-container w3-center">
+                            <p>Control Panel</p>
+                        </div>
+                    </section>
+                </a>
+
+                <a href="https://brickmmo.com/">
+                    <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin" style="width: 250px; height: 250px; ">
+                        <img src="https://branding.brickmmo.com/icons/png/12_QR.png" alt="" style="width: 200px;">
+                        <div class="w3-container w3-center">
+                            <p>QR</p>
+                        </div>
+                    </section>
+                </a>
+
+                <a href="https://brickmmo.com/">
+                    <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin" style="width: 250px; height: 250px; ">
+                        <img src="https://branding.brickmmo.com/icons/png/13_Timesheets.png" alt="" style="width: 200px;">
+                        <div class="w3-container w3-center">
+                            <p>Timesheets</p>
+                        </div>
+                    </section>
+                </a>
+
+                <a href="https://brickmmo.com/">
+                    <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin" style="width: 250px; height: 250px; ">
+                        <img src="https://branding.brickmmo.com/icons/png/14_BrickOverflow.png" alt=""
+                            style="width: 200px;">
+                        <div class="w3-container w3-center">
+                            <p>Brick Overflow</p>
+                        </div>
+                    </section>
+                </a>
+
+                <a href="https://brickmmo.com/">
+                    <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin" style="width: 250px; height: 250px; ">
+                        <img src="https://branding.brickmmo.com/icons/png/15_Tracks.png" alt="" style="width: 200px;">
+                        <div class="w3-container w3-center">
+                            <p>Tracks</p>
+                        </div>
+                    </section>
+                </a>
+
+                <a href="https://brickmmo.com/">
+                    <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin" style="width: 250px; height: 250px; ">
+                        <img src="https://branding.brickmmo.com/icons/png/16_RoadView.png" alt="" style="width: 200px;">
+                        <div class="w3-container w3-center">
+                            <p>Road View</p>
+                        </div>
+                    </section>
+                </a>
+
+                <a href="https://brickmmo.com/">
+                    <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin" style="width: 250px; height: 250px; ">
+                        <img src="https://branding.brickmmo.com/icons/png/17_Timeline.png" alt="" style="width: 200px;">
+                        <div class="w3-container w3-center">
+                            <p>Timeline</p>
+                        </div>
+                    </section>
+                </a>
+
+                <a href="https://brickmmo.com/">
+                    <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin" style="width: 250px; height: 250px; ">
+                        <img src="https://branding.brickmmo.com/icons/png/18_PlaceKit.png" alt="" style="width: 200px;">
+                        <div class="w3-container w3-center">
+                            <p>Place Kit</p>
+                        </div>
+                    </section>
+                </a>
+
+                <a href="https://brickmmo.com/">
+                    <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin" style="width: 250px; height: 250px; ">
+                        <img src="https://branding.brickmmo.com/icons/png/19_VideoKit.png" alt="" style="width: 200px;">
+                        <div class="w3-container w3-center">
+                            <p>Video Kit</p>
+                        </div>
+                    </section>
+                </a>
+
+                <a href="https://brickmmo.com/">
+                    <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin" style="width: 250px; height: 250px; ">
+                        <img src="https://branding.brickmmo.com/icons/png/20_Stores.png" alt="" style="width: 200px;">
+                        <div class="w3-container w3-center">
+                            <p>Stores</p>
+                        </div>
+                    </section>
+                </a>
+
+                <a href="https://brickmmo.com/">
+                    <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin" style="width: 250px; height: 250px; ">
+                        <img src="https://branding.brickmmo.com/icons/png/21_Bricksum.png" alt="" style="width: 200px;">
+                        <div class="w3-container w3-center">
+                            <p>Bricksum</p>
+                        </div>
+                    </section>
+                </a>
+
+
+                <!-- <a href="https://brickmmo.com/"--<a> 
+                        <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin" style="width: 250px; height: 250px; ">
+                        <img src="" alt="" style="width: 200px;">
+                        <div class="w3-container w3-center">
+                            <p></p>
+                        </div>
+                    </section>
+                </a>
+
+                <a href="https://brickmmo.com/">
+                    <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin" style="width: 250px; height: 250px; ">
+                        <img src="" alt="" style="width: 200px;">
+                        <div class="w3-container w3-center">
+                            <p></p>
+                        </div>
+                    </section>
+                </a> -->
+
+            </div>
+
+
+
+
+        </section>
+
+    </main>
+
+    <script
+      src="https://kit.fontawesome.com/a74f41de6e.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

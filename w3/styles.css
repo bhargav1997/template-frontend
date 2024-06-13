@@ -31,9 +31,18 @@
 
 a:link,
 a:active,
-a:visited {
+a:visited,
+a:hover {
   color: #ff5b00 !important;
 }
-a:hover {
+
+a.w3-text-red:link,
+a.w3-text-red:active,
+a.w3-text-red:visited,
+a.w3-text-red:hover {
   color: #ff0000 !important;
+}
+
+.bm-caps {
+  text-transform: uppercase;
 }

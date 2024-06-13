@@ -13,350 +13,263 @@
   </head>
 
   <body>
+    <!-- TOP NAVIGATION -->
+    <script>
+      window.onload = (event) => {
+        let sidebar = document.getElementById("sidebar");
+        let width = sidebar.getBoundingClientRect().width;
+        sidebar.style.left = "-" + width + "px";
+      };
 
-<body>
+      function w3_sidebar_toggle() {
+        let sidebar = document.getElementById("sidebar");
+        let width = sidebar.getBoundingClientRect().width;
 
-    <nav class="w3-bar w3-border-bottom w3-padding w3-top" style="position: sticky;">
-        <div class="w3-row">
-            <div class="w3-col s6">
+        sidebar.style.transition = "0.5s";
 
-                <button class="w3-button" onclick="w3_toggle()">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
+        if (sidebar.style.left == "0px") {
+          sidebar.style.left = "-" + width + "px";
+          document.getElementById("overlay").style.display = "none";
+          setTimeout(function () {
+            w3_sidebar_close_all();
+          }, 500);
+        } else {
+          sidebar.style.left = "0px";
+          document.getElementById("overlay").style.display = "block";
+        }
+      }
+    </script>
 
-                <script>
-
-                function w3_toggle() {
-                    let sidebar = document.getElementById("sidebar");
-
-                    if(sidebar.classList.contains("w3-animate-left"))
-                    {
-                        console.log('in');
-                        sidebar.classList.remove("w3-animate-left");
-                        sidebar.classList.add("w3-animate-right");
-                    }
-                    else
-                    {
-                        console.log('out');
-                        sidebar.classList.add("w3-animate-left");
-                        sidebar.classList.remove("w3-animate-right");
-                    }
-                }
-                
-                </script>
-
-                <a href="/" class=" w3-margin-left"><img src="images/brickmmo_logo.png" style="height: 35px" /></a>
-
-                <button class="w3-border w3-border-gray w3-button w3-margin-left">
-                    <i class="fa-solid fa-city"></i>
-                    Smart City
-                    <i class="fa-solid fa-caret-down"></i>
-                </button>
-                
-            </div>
-            <div class="w3-col s6" style="text-align: right;">
-              
-                <img src="/images/profile.jpg" style="height: 35px" class="w3-circle" />
-
-                <button class="w3-button" onclick="w3_toggle()">
-                    <i class="fa-solid fa-grip-vertical"></i>
-                </button>
-
-            </div>
-          </div>
+    <nav
+      class="w3-bar w3-border-bottom w3-padding w3-white w3-top"
+      style="position: sticky; z-index: 102"
+    >
+      <div class="w3-row">
+        <div class="w3-col s6">
+          <button class="w3-button" onclick="w3_sidebar_toggle()">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <a href="/" class="w3-margin-left"
+            ><img src="images/brickmmo_logo.png" style="height: 35px"
+          /></a>
+          <button class="w3-border w3-border-gray w3-button w3-margin-left">
+            <i class="fa-solid fa-city"></i>
+            Smart City
+            <i class="fa-solid fa-caret-down"></i>
+          </button>
+        </div>
+        <div class="w3-col s6" style="text-align: right">
+          <img
+            src="/images/profile.jpg"
+            style="height: 35px"
+            class="w3-circle"
+          />
+          <button class="w3-button">
+            <i class="fa-solid fa-grip-vertical"></i>
+          </button>
+        </div>
+      </div>
     </nav>
 
-    <nav class="w3-sidebar w3-bar-block w3-border-right w3-border-gray" id="sidebar">
-        <button class="w3-bar-item w3-button w3-large"
-        onclick="w3_toggle()">Close &times;</button>
-        <a href="#" class="w3-bar-item w3-button">Link 1</a>
-        <a href="#" class="w3-bar-item w3-button">Link 2</a>
-        <a href="#" class="w3-bar-item w3-button">Link 3</a>
+    <!-- SIDE NAVIGATION -->
+
+    <script>
+      function w3_toggle_sub(id) {
+        let target = document.getElementById(id);
+        let link = target.previousElementSibling;
+        let icon = link.getElementsByTagName("i")[0];
+
+        if (target.style.display == "none") {
+          w3_sidebar_close_all();
+          icon.classList.remove("fa-caret-right");
+          icon.classList.add("fa-caret-down");
+          target.style.display = "block";
+        } else {
+          icon.classList.remove("fa-caret-down");
+          icon.classList.add("fa-caret-right");
+          target.style.display = "none";
+        }
+
+        return false;
+      }
+
+      function w3_sidebar_close_all() {
+        let down = document.querySelectorAll("#sidebar .fa-caret-down");
+        for (let i = 0; i < down.length; i++) {
+          down[i].classList.add("fa-caret-right");
+          down[i].classList.remove("fa-caret-down");
+          down[i].parentElement.nextElementSibling.style.display = "none";
+        }
+      }
+    </script>
+
+    <nav
+      class="w3-sidebar w3-bar-block w3-border-right"
+      id="sidebar"
+      style="width: 100%; max-width: 250px; left: -250px; z-index: 101"
+    >
+      <div class="w3-padding-16 w3-border-bottom">
+        <a href="dashboard.html" class="w3-bar-item w3-button">
+          <i class="fa-solid fa-gauge"></i>
+          Dashboard
+        </a>
+      </div>
+
+      <div class="w3-padding-16">
+        <a
+          class="w3-bar-item w3-button bm-caps w3-text-red"
+          href="#"
+          onclick="return w3_toggle_sub('transportation')"
+        >
+          Transportation
+          <i class="fa-solid fa-caret-right"></i>
+        </a>
+        <div id="transportation" style="display: none" class="w3-border-bottom">
+          <a href="gps.html" class="w3-bar-item w3-button">
+            <i class="fa-solid fa-globe"></i>
+            GPS
+          </a>
+          <a href="navigation.html" class="w3-bar-item w3-button">
+            <i class="fa-solid fa-globe"></i>
+            Navigation
+          </a>
+          <a href="roadview.html" class="w3-bar-item w3-button">
+            <i class="fa-solid fa-globe"></i>
+            Road View
+          </a>
+          <a href="tracks.html" class="w3-bar-item w3-button">
+            <i class="fa-solid fa-globe"></i>
+            Tracks
+          </a>
+          <a href="trains.html" class="w3-bar-item w3-button">
+            <i class="fa-solid fa-globe"></i>
+            Trains
+          </a>
+        </div>
+        <a
+          class="w3-bar-item w3-button bm-caps w3-text-red"
+          href="#"
+          onclick="return w3_toggle_sub('students')"
+        >
+          Students
+          <i class="fa-solid fa-caret-right"></i>
+        </a>
+        <div id="students" style="display: none" class="w3-border-bottom">
+          <a href="brick-overflow.html" class="w3-bar-item w3-button">
+            <i class="fa-solid fa-globe"></i>
+            Brick Overflow
+          </a>
+          <a href="flow.html" class="w3-bar-item w3-button">
+            <i class="fa-solid fa-globe"></i>
+            Flow
+          </a>
+          <a href="timesheets.html" class="w3-bar-item w3-button">
+            <i class="fa-solid fa-globe"></i>
+            Timesheets
+          </a>
+        </div>
+        <a
+          class="w3-bar-item w3-button bm-caps w3-text-red"
+          href="#"
+          onclick="return w3_toggle_sub('communications')"
+        >
+          Communications
+          <i class="fa-solid fa-caret-right"></i>
+        </a>
+        <div id="communications" style="display: none" class="w3-border-bottom">
+          <a href="brix.html" class="w3-bar-item w3-button">
+            <i class="fa-solid fa-globe"></i>
+            Brix
+          </a>
+          <a href="events.html" class="w3-bar-item w3-button">
+            <i class="fa-solid fa-globe"></i>
+            Events
+          </a>
+          <a href="radio.html" class="w3-bar-item w3-button">
+            <i class="fa-solid fa-globe"></i>
+            Radio
+          </a>
+        </div>
+        <a
+          class="w3-bar-item w3-button bm-caps w3-text-red"
+          href="#"
+          onclick="return w3_toggle_sub('community')"
+        >
+          Community
+          <i class="fa-solid fa-caret-right"></i>
+        </a>
+        <div id="community" style="display: none" class="w3-border-bottom">
+          <a href="colours.html" class="w3-bar-item w3-button">
+            <i class="fa-solid fa-globe"></i>
+            Colours
+          </a>
+          <a href="parts.html" class="w3-bar-item w3-button">
+            <i class="fa-solid fa-globe"></i>
+            Parts
+          </a>
+          <a href="pick-a-brick.html" class="w3-bar-item w3-button">
+            <i class="fa-solid fa-globe"></i>
+            Pick-a-Brick
+          </a>
+          <a href="stores.html" class="w3-bar-item w3-button">
+            <i class="fa-solid fa-globe"></i>
+            Stores
+          </a>
+        </div>
+        <a
+          class="w3-bar-item w3-button bm-caps w3-text-red"
+          href="#"
+          onclick="return w3_toggle_sub('content')"
+        >
+          Content
+          <i class="fa-solid fa-caret-right"></i>
+        </a>
+        <div id="content" style="display: none" class="w3-border-bottom">
+          <a href="bricksum.html" class="w3-bar-item w3-button">
+            <i class="fa-solid fa-globe"></i>
+            Bricksum
+          </a>
+          <a href="placekit.html" class="w3-bar-item w3-button">
+            <i class="fa-solid fa-globe"></i>
+            Placekit
+          </a>
+          <a href="qr.html" class="w3-bar-item w3-button">
+            <i class="fa-solid fa-globe"></i>
+            QR Codes
+          </a>
+          <a href="videokit.html" class="w3-bar-item w3-button">
+            <i class="fa-solid fa-globe"></i>
+            Videokit
+          </a>
+        </div>
+        <a
+          class="w3-bar-item w3-button bm-caps w3-text-red"
+          href="#"
+          onclick="return w3_toggle_sub('manage-city')"
+        >
+          Manage City
+          <i class="fa-solid fa-caret-right"></i>
+        </a>
+        <div id="manage-city" style="display: none" class="w3-border-bottom">
+          <a href="power-grid.html" class="w3-bar-item w3-button">
+            <i class="fa-solid fa-globe"></i>
+            Power Grid
+          </a>
+          <a href="control-panel.html" class="w3-bar-item w3-button">
+            <i class="fa-solid fa-globe"></i>
+            Control Panel
+          </a>
+        </div>
+        <!--<a href="timeline.html" class="w3-bar-item w3-button">Timeline</a>-->
+      </div>
     </nav>
 
-
-
-
-        <!-- Select City Modal -->
-        <section id="selectCity" class="w3-modal">
-            <div class="w3-modal-content w3-animate-top">
-
-                <header class="w3-container w3-light-grey">
-                    <span onclick="document.getElementById('selectCity').style.display='none'"
-                        class="w3-button w3-display-topright">&times;</span>
-                    <p>Switch City</p>
-                </header>
-
-                <div class="w3-padding">
-                    <div class="w3-container w3-margin w3-padding w3-dark-grey">
-                        Select City
-                    </div>
-
-                    <div class="w3-container w3-margin-bottom">
-                        <a href="#" class="w3-button w3-block w3-left-align">City 1</a>
-                        <a href="#" class="w3-button w3-block w3-left-align">City 2</a>
-                        <a href="#" class="w3-button w3-block w3-left-align">City 3</a>
-                        <a href="#" class="w3-button w3-block w3-left-align">City 4</a>
-                        <a href="#" class="w3-button w3-block w3-left-align">City 5</a>
-                        <a href="#" class="w3-button w3-block w3-left-align">City 6</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-    </nav>
-
-
-
-    <main>
-
-        <!-- Welcome message -->
-        <section class="w3-container w3-center w3-deep-orange">
-
-            <h1>
-                Welcome to BrickMMO Console
-            </h1>
-
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac
-                aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
-                himenaeos.
-            </p>
-
-        </section>
-
-        <!-- Apps section -->
-        <section class="w3-container">
-
-            <h2 class="w3-left-align w3-margin">Apps</h2>
-
-            <div class="w3-center" style="display: flex; flex-wrap: wrap; justify-content: center;">
-
-
-                <a href="https://brickmmo.com/">
-                    <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin"
-                        style="width: 250px; height: 250px;  height: 250px;">
-                        <img src="https://branding.brickmmo.com/icons/png/1_Brix.png" alt="" style="width: 200px;">
-                        <div class="w3-container w3-center">
-                            <p>BrikX</p>
-                        </div>
-                    </section>
-                </a>
-
-                <a href="https://brickmmo.com/">
-                    <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin" style="width: 250px; height: 250px; ">
-                        <img src="https://branding.brickmmo.com/icons/png/2_Navigation.png" alt=""
-                            style="width: 200px;">
-                        <div class="w3-container w3-center">
-                            <p>Navigation</p>
-                        </div>
-                    </section>
-                </a>
-
-                <a href="https://brickmmo.com/">
-                    <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin" style="width: 250px; height: 250px; ">
-                        <img src="https://branding.brickmmo.com/icons/png/3_Flow.png" alt="" style="width: 200px;">
-                        <div class="w3-container w3-center">
-                            <p>Flow</p>
-                        </div>
-                    </section>
-                </a>
-
-                <a href="https://brickmmo.com/">
-                    <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin" style="width: 250px; height: 250px; ">
-                        <img src="https://branding.brickmmo.com/icons/png/4_Events.png" alt="" style="width: 200px;">
-                        <div class="w3-container w3-center">
-                            <p>Events</p>
-                        </div>
-                    </section>
-                </a>
-
-                <a href="https://brickmmo.com/">
-                    <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin" style="width: 250px; height: 250px; ">
-                        <img src="https://branding.brickmmo.com/icons/png/5_Radio_Station.png" alt=""
-                            style="width: 200px;">
-                        <div class="w3-container w3-center">
-                            <p>Radio Station</p>
-                        </div>
-                    </section>
-                </a>
-
-                <a href="https://brickmmo.com/">
-                    <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin" style="width: 250px; height: 250px; ">
-                        <img src="https://branding.brickmmo.com/icons/png/6_Train.png" alt="" style="width: 200px;">
-                        <div class="w3-container w3-center">
-                            <p>Train</p>
-                        </div>
-                    </section>
-                </a>
-
-                <a href="https://brickmmo.com/">
-                    <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin" style="width: 250px; height: 250px; ">
-                        <img src="https://branding.brickmmo.com/icons/png/7_Pick_A_Brick.png" alt=""
-                            style="width: 200px;">
-                        <div class="w3-container w3-center">
-                            <p>Pick A Brick</p>
-                        </div>
-                    </section>
-                </a>
-
-                <a href="https://brickmmo.com/">
-                    <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin" style="width: 250px; height: 250px; ">
-                        <img src="https://branding.brickmmo.com/icons/png/8_Colours.png" alt="" style="width: 200px;">
-                        <div class="w3-container w3-center">
-                            <p>Colours</p>
-                        </div>
-                    </section>
-                </a>
-
-                <a href="https://brickmmo.com/">
-                    <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin" style="width: 250px; height: 250px; ">
-                        <img src="https://branding.brickmmo.com/icons/png/9_Parts.png" alt="" style="width: 200px;">
-                        <div class="w3-container w3-center">
-                            <p>Parts</p>
-                        </div>
-                    </section>
-                </a>
-
-                <a href="https://brickmmo.com/">
-                    <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin" style="width: 250px; height: 250px; ">
-                        <img src="https://branding.brickmmo.com/icons/png/10_Power_Grid.png" alt=""
-                            style="width: 200px;">
-                        <div class="w3-container w3-center">
-                            <p>Power Grid</p>
-                        </div>
-                    </section>
-                </a>
-
-                <a href="https://brickmmo.com/">
-                    <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin" style="width: 250px; height: 250px; ">
-                        <img src="https://branding.brickmmo.com/icons/png/11_Control_Panel.png" alt=""
-                            style="width: 200px;">
-                        <div class="w3-container w3-center">
-                            <p>Control Panel</p>
-                        </div>
-                    </section>
-                </a>
-
-                <a href="https://brickmmo.com/">
-                    <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin" style="width: 250px; height: 250px; ">
-                        <img src="https://branding.brickmmo.com/icons/png/12_QR.png" alt="" style="width: 200px;">
-                        <div class="w3-container w3-center">
-                            <p>QR</p>
-                        </div>
-                    </section>
-                </a>
-
-                <a href="https://brickmmo.com/">
-                    <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin" style="width: 250px; height: 250px; ">
-                        <img src="https://branding.brickmmo.com/icons/png/13_Timesheets.png" alt="" style="width: 200px;">
-                        <div class="w3-container w3-center">
-                            <p>Timesheets</p>
-                        </div>
-                    </section>
-                </a>
-
-                <a href="https://brickmmo.com/">
-                    <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin" style="width: 250px; height: 250px; ">
-                        <img src="https://branding.brickmmo.com/icons/png/14_BrickOverflow.png" alt=""
-                            style="width: 200px;">
-                        <div class="w3-container w3-center">
-                            <p>Brick Overflow</p>
-                        </div>
-                    </section>
-                </a>
-
-                <a href="https://brickmmo.com/">
-                    <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin" style="width: 250px; height: 250px; ">
-                        <img src="https://branding.brickmmo.com/icons/png/15_Tracks.png" alt="" style="width: 200px;">
-                        <div class="w3-container w3-center">
-                            <p>Tracks</p>
-                        </div>
-                    </section>
-                </a>
-
-                <a href="https://brickmmo.com/">
-                    <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin" style="width: 250px; height: 250px; ">
-                        <img src="https://branding.brickmmo.com/icons/png/16_RoadView.png" alt="" style="width: 200px;">
-                        <div class="w3-container w3-center">
-                            <p>Road View</p>
-                        </div>
-                    </section>
-                </a>
-
-                <a href="https://brickmmo.com/">
-                    <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin" style="width: 250px; height: 250px; ">
-                        <img src="https://branding.brickmmo.com/icons/png/17_Timeline.png" alt="" style="width: 200px;">
-                        <div class="w3-container w3-center">
-                            <p>Timeline</p>
-                        </div>
-                    </section>
-                </a>
-
-                <a href="https://brickmmo.com/">
-                    <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin" style="width: 250px; height: 250px; ">
-                        <img src="https://branding.brickmmo.com/icons/png/18_PlaceKit.png" alt="" style="width: 200px;">
-                        <div class="w3-container w3-center">
-                            <p>Place Kit</p>
-                        </div>
-                    </section>
-                </a>
-
-                <a href="https://brickmmo.com/">
-                    <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin" style="width: 250px; height: 250px; ">
-                        <img src="https://branding.brickmmo.com/icons/png/19_VideoKit.png" alt="" style="width: 200px;">
-                        <div class="w3-container w3-center">
-                            <p>Video Kit</p>
-                        </div>
-                    </section>
-                </a>
-
-                <a href="https://brickmmo.com/">
-                    <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin" style="width: 250px; height: 250px; ">
-                        <img src="https://branding.brickmmo.com/icons/png/20_Stores.png" alt="" style="width: 200px;">
-                        <div class="w3-container w3-center">
-                            <p>Stores</p>
-                        </div>
-                    </section>
-                </a>
-
-                <a href="https://brickmmo.com/">
-                    <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin" style="width: 250px; height: 250px; ">
-                        <img src="https://branding.brickmmo.com/icons/png/21_Bricksum.png" alt="" style="width: 200px;">
-                        <div class="w3-container w3-center">
-                            <p>Bricksum</p>
-                        </div>
-                    </section>
-                </a>
-
-
-                <!-- <a href="https://brickmmo.com/"--<a> 
-                        <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin" style="width: 250px; height: 250px; ">
-                        <img src="" alt="" style="width: 200px;">
-                        <div class="w3-container w3-center">
-                            <p></p>
-                        </div>
-                    </section>
-                </a>
-
-                <a href="https://brickmmo.com/">
-                    <section class="w3-card-4 w3-center w3-col m4 l3 w3-margin" style="width: 250px; height: 250px; ">
-                        <img src="" alt="" style="width: 200px;">
-                        <div class="w3-container w3-center">
-                            <p></p>
-                        </div>
-                    </section>
-                </a> -->
-
-            </div>
-
-
-
-
-        </section>
-
-    </main>
+    <div
+      class="w3-overlay"
+      onclick="w3_sidebar_toggle()"
+      style="cursor: pointer; z-index: 100"
+      id="overlay"
+    ></div>
 
     <script
       src="https://kit.fontawesome.com/a74f41de6e.js"
