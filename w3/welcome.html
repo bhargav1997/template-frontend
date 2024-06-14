@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles.css" />
     <link
       rel="stylesheet"
-      href="https://cdn.brickmmo.com/font-icons@1.0.0/font-icons.css"
+      href="https://cdn.brickmmo.com/fonticons@1.0.0/fonticons.css"
     />
   </head>
 
@@ -84,7 +84,7 @@
             style="height: 35px"
             class="w3-circle"
           />
-          <button class="w3-button">
+          <button class="w3-button" onclick="open_modal('apps')">
             <i class="fa-solid fa-grip-vertical"></i>
           </button>
         </div>
@@ -311,7 +311,7 @@
       </div>
     </nav>
 
-    <!-- CHANGE CITY MODAL -->
+    <!-- MODALS -->
 
     <script>
       function open_modal(id) {
@@ -338,6 +338,7 @@
       }
     </script>
 
+    <!-- CITY MODAL -->
     <div
       id="city"
       class="w3-modal"
@@ -397,6 +398,71 @@
       </div>
     </div>
 
+    <!-- APP MODAL -->
+
+    <div
+      id="apps"
+      class="w3-modal"
+      style="z-index: 200; opacity: 0; border: 1px solid red; display: none"
+    >
+      <div class="w3-modal-content w3-card-4">
+        <header class="w3-bar w3-border-bottom w3-padding w3-white">
+          <div class="w3-row">
+            <div class="w3-col s6">
+              <p style="margin-block-end: 8px; margin-block-start: 8px">
+                <i class="fa-solid fa-city"></i> Switch Apps
+              </p>
+            </div>
+            <div class="w3-col s6 w3-right-align"></div>
+          </div>
+        </header>
+        <div class="w3-container">
+          <div class="w3-row">
+            <div class="w3-col s2 w3-center w3-padding">
+              <a href="https://bricksum.brickmmo.com">
+                <img
+                  src="https://cdn.brickmmo.com/icons@1.0.0/bricksum.png"
+                  class="w3-image"
+                />
+              </a>
+            </div>
+            <div class="w3-col s2 w3-center w3-padding">
+              <a href="https://loot.brickmmo.com">
+                <img
+                  src="https://cdn.brickmmo.com/icons@1.0.0/brix.png"
+                  class="w3-image"
+                />
+              </a>
+            </div>
+            <div class="w3-col s2 w3-center w3-padding">
+              <a href="https://media.brickmmo.com">
+                <img
+                  src="https://cdn.brickmmo.com/icons@1.0.0/brix.png"
+                  class="w3-image"
+                />
+              </a>
+            </div>
+            <div class="w3-col s2 w3-center w3-padding">
+              <a href="https://loot.brickmmo.com">
+                <img
+                  src="https://cdn.brickmmo.com/icons@1.0.0/brix.png"
+                  class="w3-image"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <footer class="w3-container w3-border-top w3-right-align w3-padding">
+          <button
+            class="w3-button w3-white w3-border"
+            onclick="close_modal('apps');"
+          >
+            Close
+          </button>
+        </footer>
+      </div>
+    </div>
+
     <div
       class="w3-overlay"
       style="z-index: 100; display: none; background: rgba(0, 0, 0, 0.4)"
@@ -415,7 +481,7 @@
         <a href="/account.html"> Adam Thomas</a>
         working on
         <i class="fa-solid fa-city"></i>
-        <a href="">Smart City</a>.
+        <a href="city.html">Smart City</a>.
       </p>
       <hr />
       <h3 class="w3-margin-top w3-margin-bottom">Quick Access</h3>
@@ -482,12 +548,12 @@
           </a>
         </div>
         <div class="w3-quarter">
-          <a href="https://branding.brickmmo.com">
-            <img src="/images/screenshot-branding.png" class="w3-image" />
+          <a href="https://cdn.brickmmo.com">
+            <img src="/images/screenshot-cdn.png" class="w3-image" />
           </a>
         </div>
         <div class="w3-quarter">
-          <a href="https://branding.brickmmo.com">
+          <a href="https://fonticons.brickmmo.com">
             <img src="/images/screenshot-branding.png" class="w3-image" />
           </a>
         </div>
