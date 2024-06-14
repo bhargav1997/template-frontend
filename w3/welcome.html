@@ -18,24 +18,32 @@
     <script>
       window.onload = (event) => {
         let sidebar = document.getElementById("sidebar");
+        let overlay = document.getElementById("sidebarOverlay");
         let width = sidebar.getBoundingClientRect().width;
+
         sidebar.style.left = "-" + width + "px";
+        overlay.style.display = "block";
+        overlay.style.opacity = "0";
       };
 
-      function w3_sidebar_toggle() {
+      function w3_sidebar_toggle(force) {
         let sidebar = document.getElementById("sidebar");
+        let overlay = document.getElementById("sidebarOverlay");
         let width = sidebar.getBoundingClientRect().width;
 
         sidebar.style.transition = "0.5s";
+        overlay.style.transition = "0.5s";
 
-        if (sidebar.style.left == "0px") {
+        if (sidebar.style.left == "0px" || force == 'close"') {
           sidebar.style.left = "-" + width + "px";
-          document.getElementById("sidebarOverlay").style.display = "none";
+          overlay.style.opacity = "0";
+
           setTimeout(function () {
             w3_sidebar_close_all();
           }, 500);
         } else {
           sidebar.style.left = "0px";
+          overlay.style.opacity = "1";
           document.getElementById("sidebarOverlay").style.display = "block";
         }
       }
@@ -83,15 +91,15 @@
         let link = target.previousElementSibling;
         let icon = link.getElementsByTagName("i")[0];
 
-        if (target.style.display == "none") {
+        if (target.style.display == "block") {
+          icon.classList.remove("fa-caret-down");
+          icon.classList.add("fa-caret-right");
+          target.style.display = "none";
+        } else {
           w3_sidebar_close_all();
           icon.classList.remove("fa-caret-right");
           icon.classList.add("fa-caret-down");
           target.style.display = "block";
-        } else {
-          icon.classList.remove("fa-caret-down");
-          icon.classList.add("fa-caret-right");
-          target.style.display = "none";
         }
 
         return false;
@@ -306,15 +314,35 @@
 
     <script>
       function open_modal(id) {
-        document.getElementById(id).style.display = "block";
+        // w3_sidebar_toggle("close");
+
+        let modal = document.getElementById(id);
+
+        modal.style.display = "block";
+
+        setTimeout(function () {
+          modal.style.transition = "0.5s";
+          modal.style.opacity = "1";
+        }, 0);
       }
       function close_modal(id) {
-        document.getElementById(id).style.display = "none";
+        let modal = document.getElementById(id);
+
+        modal.style.transition = "0.5s";
+        modal.style.opacity = "0";
+
+        setTimeout(function () {
+          modal.style.display = "none";
+        }, 500);
       }
     </script>
 
-    <div id="city" class="w3-modal" style="z-index: 200">
-      <div class="w3-modal-content w3-animate-opacity w3-card-4">
+    <div
+      id="city"
+      class="w3-modal"
+      style="z-index: 200; opacity: 0; border: 1px solid red; display: none"
+    >
+      <div class="w3-modal-content w3-card-4">
         <header class="w3-bar w3-border-bottom w3-padding w3-white">
           <div class="w3-row">
             <div class="w3-col s6">
@@ -343,8 +371,7 @@
 
     <div
       class="w3-overlay"
-      onclick="w3_sidebar_toggle()"
-      style="cursor: pointer; z-index: 100"
+      style="z-index: 100; display: none; background: rgba(0, 0, 0, 0.4)"
       id="sidebarOverlay"
     ></div>
 
