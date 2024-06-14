@@ -19,10 +19,11 @@
       window.onload = (event) => {
         let sidebar = document.getElementById("sidebar");
         let overlay = document.getElementById("sidebarOverlay");
+
         let width = sidebar.getBoundingClientRect().width;
 
         sidebar.style.left = "-" + width + "px";
-        overlay.style.display = "block";
+        overlay.style.display = "none";
         overlay.style.opacity = "0";
       };
 
@@ -31,20 +32,27 @@
         let overlay = document.getElementById("sidebarOverlay");
         let width = sidebar.getBoundingClientRect().width;
 
-        sidebar.style.transition = "0.5s";
-        overlay.style.transition = "0.5s";
-
         if (sidebar.style.left == "0px" || force == 'close"') {
+          sidebar.style.transition = "0.5s";
           sidebar.style.left = "-" + width + "px";
+
+          overlay.style.transition = "0.5s";
           overlay.style.opacity = "0";
 
           setTimeout(function () {
+            overlay.style.display = "none";
             w3_sidebar_close_all();
           }, 500);
         } else {
+          sidebar.style.transition = "0.5s";
           sidebar.style.left = "0px";
-          overlay.style.opacity = "1";
-          document.getElementById("sidebarOverlay").style.display = "block";
+
+          overlay.style.display = "block";
+
+          setTimeout(function () {
+            overlay.style.transition = "0.5s";
+            overlay.style.opacity = "1";
+          }, 0);
         }
       }
     </script>
@@ -374,6 +382,53 @@
       style="z-index: 100; display: none; background: rgba(0, 0, 0, 0.4)"
       id="sidebarOverlay"
     ></div>
+
+    <!-- CONTENT -->
+    <main
+      class="w2-container w3-auto w3-padding"
+      style="width: 100%; max-width: 992px"
+    >
+      <h1>Welcome!</h1>
+      <p>
+        You are logged in as
+        <img src="/images/profile.jpg" style="height: 25px" class="w3-circle" />
+        <a href="/account.php"> Adam Thomas</a>
+        working on the
+        <i class="fa-solid fa-city"></i>
+        <a href="">Smart City</a>.
+      </p>
+      <hr />
+      <h3>Quick Access</h3>
+      <div
+        class="w3-row-padding"
+        style="margin-left: -16px; margin-right: -16px"
+      >
+        <div class="w3-third">
+          <div
+            style="height: 100px"
+            class="w3-card w3-container w3-margin-bottom"
+          >
+            <p>w3-card</p>
+          </div>
+        </div>
+        <div class="w3-third">
+          <div
+            style="height: 100px"
+            class="w3-card w3-container w3-margin-bottom"
+          >
+            <p>w3-card-2</p>
+          </div>
+        </div>
+        <div class="w3-third">
+          <div
+            style="height: 100px"
+            class="w3-card w3-container w3-margin-bottom"
+          >
+            <p>w3-card-4</p>
+          </div>
+        </div>
+      </div>
+    </main>
 
     <script
       src="https://kit.fontawesome.com/a74f41de6e.js"
