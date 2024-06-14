@@ -14,6 +14,7 @@
 
   <body>
     <!-- TOP NAVIGATION -->
+
     <script>
       window.onload = (event) => {
         let sidebar = document.getElementById("sidebar");
@@ -29,13 +30,13 @@
 
         if (sidebar.style.left == "0px") {
           sidebar.style.left = "-" + width + "px";
-          document.getElementById("overlay").style.display = "none";
+          document.getElementById("sidebarOverlay").style.display = "none";
           setTimeout(function () {
             w3_sidebar_close_all();
           }, 500);
         } else {
           sidebar.style.left = "0px";
-          document.getElementById("overlay").style.display = "block";
+          document.getElementById("sidebarOverlay").style.display = "block";
         }
       }
     </script>
@@ -52,13 +53,16 @@
           <a href="/" class="w3-margin-left"
             ><img src="images/brickmmo_logo.png" style="height: 35px"
           /></a>
-          <button class="w3-border w3-border-gray w3-button w3-margin-left">
+          <button
+            class="w3-border w3-border-gray w3-button w3-margin-left"
+            onclick="open_modal('city')"
+          >
             <i class="fa-solid fa-city"></i>
             Smart City
             <i class="fa-solid fa-caret-down"></i>
           </button>
         </div>
-        <div class="w3-col s6" style="text-align: right">
+        <div class="w3-col s6 w3-right-align">
           <img
             src="/images/profile.jpg"
             style="height: 35px"
@@ -115,16 +119,17 @@
         </a>
       </div>
 
-      <div class="w3-padding-16">
+      <div class="w3-padding-16 w3-border-bottom">
+        <div class="w3-bar-item w3-text-gray bm-caps">City Portal</div>
         <a
-          class="w3-bar-item w3-button bm-caps w3-text-red"
+          class="w3-bar-item w3-button w3-text-red"
           href="#"
           onclick="return w3_toggle_sub('transportation')"
         >
           Transportation
           <i class="fa-solid fa-caret-right"></i>
         </a>
-        <div id="transportation" style="display: none" class="w3-border-bottom">
+        <div id="transportation" style="display: none">
           <a href="gps.html" class="w3-bar-item w3-button">
             <i class="fa-solid fa-globe"></i>
             GPS
@@ -147,14 +152,14 @@
           </a>
         </div>
         <a
-          class="w3-bar-item w3-button bm-caps w3-text-red"
+          class="w3-bar-item w3-button w3-text-red"
           href="#"
           onclick="return w3_toggle_sub('students')"
         >
           Students
           <i class="fa-solid fa-caret-right"></i>
         </a>
-        <div id="students" style="display: none" class="w3-border-bottom">
+        <div id="students" style="display: none">
           <a href="brick-overflow.html" class="w3-bar-item w3-button">
             <i class="fa-solid fa-globe"></i>
             Brick Overflow
@@ -169,14 +174,14 @@
           </a>
         </div>
         <a
-          class="w3-bar-item w3-button bm-caps w3-text-red"
+          class="w3-bar-item w3-button w3-text-red"
           href="#"
           onclick="return w3_toggle_sub('communications')"
         >
           Communications
           <i class="fa-solid fa-caret-right"></i>
         </a>
-        <div id="communications" style="display: none" class="w3-border-bottom">
+        <div id="communications" style="display: none">
           <a href="brix.html" class="w3-bar-item w3-button">
             <i class="fa-solid fa-globe"></i>
             Brix
@@ -191,14 +196,14 @@
           </a>
         </div>
         <a
-          class="w3-bar-item w3-button bm-caps w3-text-red"
+          class="w3-bar-item w3-button w3-text-red"
           href="#"
           onclick="return w3_toggle_sub('community')"
         >
           Community
           <i class="fa-solid fa-caret-right"></i>
         </a>
-        <div id="community" style="display: none" class="w3-border-bottom">
+        <div id="community" style="display: none">
           <a href="colours.html" class="w3-bar-item w3-button">
             <i class="fa-solid fa-globe"></i>
             Colours
@@ -217,14 +222,14 @@
           </a>
         </div>
         <a
-          class="w3-bar-item w3-button bm-caps w3-text-red"
+          class="w3-bar-item w3-button w3-text-red"
           href="#"
           onclick="return w3_toggle_sub('content')"
         >
           Content
           <i class="fa-solid fa-caret-right"></i>
         </a>
-        <div id="content" style="display: none" class="w3-border-bottom">
+        <div id="content" style="display: none">
           <a href="bricksum.html" class="w3-bar-item w3-button">
             <i class="fa-solid fa-globe"></i>
             Bricksum
@@ -243,14 +248,14 @@
           </a>
         </div>
         <a
-          class="w3-bar-item w3-button bm-caps w3-text-red"
+          class="w3-bar-item w3-button w3-text-red"
           href="#"
           onclick="return w3_toggle_sub('manage-city')"
         >
           Manage City
           <i class="fa-solid fa-caret-right"></i>
         </a>
-        <div id="manage-city" style="display: none" class="w3-border-bottom">
+        <div id="manage-city" style="display: none">
           <a href="power-grid.html" class="w3-bar-item w3-button">
             <i class="fa-solid fa-globe"></i>
             Power Grid
@@ -260,15 +265,87 @@
             Control Panel
           </a>
         </div>
-        <!--<a href="timeline.html" class="w3-bar-item w3-button">Timeline</a>-->
+        <a href="timeline.html" class="w3-bar-item w3-button">Timeline</a>
+      </div>
+      <div class="w3-padding-16 w3-border-bottom">
+        <div class="w3-bar-item w3-text-gray bm-caps">Administration</div>
+        <a
+          class="w3-bar-item w3-button w3-text-red"
+          href="#"
+          onclick="return w3_toggle_sub('something')"
+        >
+          Something
+          <i class="fa-solid fa-caret-right"></i>
+        </a>
+        <div id="something" style="display: none">
+          <a href="gps.html" class="w3-bar-item w3-button">
+            <i class="fa-solid fa-globe"></i>
+            GPS
+          </a>
+          <a href="navigation.html" class="w3-bar-item w3-button">
+            <i class="fa-solid fa-globe"></i>
+            Navigation
+          </a>
+          <a href="roadview.html" class="w3-bar-item w3-button">
+            <i class="fa-solid fa-globe"></i>
+            Road View
+          </a>
+          <a href="tracks.html" class="w3-bar-item w3-button">
+            <i class="fa-solid fa-globe"></i>
+            Tracks
+          </a>
+          <a href="trains.html" class="w3-bar-item w3-button">
+            <i class="fa-solid fa-globe"></i>
+            Trains
+          </a>
+        </div>
       </div>
     </nav>
+
+    <!-- CHANGE CITY MODAL -->
+
+    <script>
+      function open_modal(id) {
+        document.getElementById(id).style.display = "block";
+      }
+      function close_modal(id) {
+        document.getElementById(id).style.display = "none";
+      }
+    </script>
+
+    <div id="city" class="w3-modal" style="z-index: 200">
+      <div class="w3-modal-content w3-animate-opacity w3-card-4">
+        <header class="w3-bar w3-border-bottom w3-padding w3-white">
+          <div class="w3-row">
+            <div class="w3-col s6">
+              <p style="margin-block-end: 8px; margin-block-start: 8px">
+                <i class="fa-solid fa-city"></i> Change City
+              </p>
+            </div>
+            <div class="w3-col s6 w3-right-align"></div>
+          </div>
+        </header>
+        <div class="w3-container">
+          <h2>Modal Title</h2>
+          <p>Some text..</p>
+          <p>Some text..</p>
+        </div>
+        <footer class="w3-container w3-border-top w3-right-align w3-padding">
+          <button
+            class="w3-button w3-white w3-border"
+            onclick="close_modal('city');"
+          >
+            Close
+          </button>
+        </footer>
+      </div>
+    </div>
 
     <div
       class="w3-overlay"
       onclick="w3_sidebar_toggle()"
       style="cursor: pointer; z-index: 100"
-      id="overlay"
+      id="sidebarOverlay"
     ></div>
 
     <script
