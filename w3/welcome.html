@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Welcome | BrickMMO Console</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="styles.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      href="https://cdn.brickmmo.com/font-icons@1.0.0/font-icons.css"
     />
-    <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
@@ -137,6 +137,22 @@
 
       <div class="w3-padding-16 w3-border-bottom">
         <div class="w3-bar-item w3-text-gray bm-caps">City Portal</div>
+
+        <a
+          class="w3-bar-item w3-button w3-text-red"
+          href="#"
+          onclick="return w3_toggle_sub('control')"
+        >
+          Control
+          <i class="fa-solid fa-caret-right"></i>
+        </a>
+        <div id="control" style="display: none">
+          <a href="control-panel.html" class="w3-bar-item w3-button">
+            <i class="bm-control-panel"></i>
+            Control Panel
+          </a>
+        </div>
+
         <a
           class="w3-bar-item w3-button w3-text-red"
           href="#"
@@ -146,27 +162,24 @@
           <i class="fa-solid fa-caret-right"></i>
         </a>
         <div id="transportation" style="display: none">
-          <a href="gps.html" class="w3-bar-item w3-button">
-            <i class="fa-solid fa-globe"></i>
-            GPS
-          </a>
           <a href="navigation.html" class="w3-bar-item w3-button">
-            <i class="fa-solid fa-globe"></i>
+            <i class="bm-navigation"></i>
             Navigation
           </a>
           <a href="roadview.html" class="w3-bar-item w3-button">
-            <i class="fa-solid fa-globe"></i>
-            Road View
+            <i class="bm-roadview"></i>
+            Roadview
           </a>
           <a href="tracks.html" class="w3-bar-item w3-button">
-            <i class="fa-solid fa-globe"></i>
+            <i class="bm-tracks"></i>
             Tracks
           </a>
-          <a href="trains.html" class="w3-bar-item w3-button">
-            <i class="fa-solid fa-globe"></i>
-            Trains
+          <a href="train.html" class="w3-bar-item w3-button">
+            <i class="bm-train"></i>
+            Train
           </a>
         </div>
+
         <a
           class="w3-bar-item w3-button w3-text-red"
           href="#"
@@ -177,40 +190,19 @@
         </a>
         <div id="students" style="display: none">
           <a href="brick-overflow.html" class="w3-bar-item w3-button">
-            <i class="fa-solid fa-globe"></i>
+            <i class="bm-brick-overflow"></i>
             Brick Overflow
           </a>
           <a href="flow.html" class="w3-bar-item w3-button">
-            <i class="fa-solid fa-globe"></i>
+            <i class="bm-flow"></i>
             Flow
           </a>
           <a href="timesheets.html" class="w3-bar-item w3-button">
-            <i class="fa-solid fa-globe"></i>
+            <i class="bm-timesheets"></i>
             Timesheets
           </a>
         </div>
-        <a
-          class="w3-bar-item w3-button w3-text-red"
-          href="#"
-          onclick="return w3_toggle_sub('communications')"
-        >
-          Communications
-          <i class="fa-solid fa-caret-right"></i>
-        </a>
-        <div id="communications" style="display: none">
-          <a href="brix.html" class="w3-bar-item w3-button">
-            <i class="fa-solid fa-globe"></i>
-            Brix
-          </a>
-          <a href="events.html" class="w3-bar-item w3-button">
-            <i class="fa-solid fa-globe"></i>
-            Events
-          </a>
-          <a href="radio.html" class="w3-bar-item w3-button">
-            <i class="fa-solid fa-globe"></i>
-            Radio
-          </a>
-        </div>
+
         <a
           class="w3-bar-item w3-button w3-text-red"
           href="#"
@@ -220,99 +212,100 @@
           <i class="fa-solid fa-caret-right"></i>
         </a>
         <div id="community" style="display: none">
-          <a href="colours.html" class="w3-bar-item w3-button">
-            <i class="fa-solid fa-globe"></i>
-            Colours
+          <a href="radio.html" class="w3-bar-item w3-button">
+            <i class="bm-radio-station"></i>
+            Radio
           </a>
-          <a href="parts.html" class="w3-bar-item w3-button">
-            <i class="fa-solid fa-globe"></i>
-            Parts
+          <a href="events.html" class="w3-bar-item w3-button">
+            <i class="bm-events"></i>
+            Events
           </a>
-          <a href="pick-a-brick.html" class="w3-bar-item w3-button">
-            <i class="fa-solid fa-globe"></i>
-            Pick-a-Brick
+          <a href="qr.html" class="w3-bar-item w3-button">
+            <i class="bm-qr"></i>
+            QR Codes
           </a>
-          <a href="stores.html" class="w3-bar-item w3-button">
-            <i class="fa-solid fa-globe"></i>
-            Stores
+        </div>
+
+        <a
+          class="w3-bar-item w3-button w3-text-red"
+          href="#"
+          onclick="return w3_toggle_sub('social')"
+        >
+          Social
+          <i class="fa-solid fa-caret-right"></i>
+        </a>
+        <div id="social" style="display: none">
+          <a href="brix.html" class="w3-bar-item w3-button">
+            <i class="bm-brix"></i>
+            Brix
+          </a>
+          <a href="timeline.html" class="w3-bar-item w3-button">
+            <i class="bm-timeline"></i>
+            Timeline
           </a>
         </div>
         <a
           class="w3-bar-item w3-button w3-text-red"
           href="#"
-          onclick="return w3_toggle_sub('content')"
+          onclick="return w3_toggle_sub('finances')"
+        >
+          Finances
+          <i class="fa-solid fa-caret-right"></i>
+        </a>
+        <div id="finances" style="display: none">
+          <a href="crypto-grid.html" class="w3-bar-item w3-button">
+            <i class="bm-crypto"></i>
+            Crypto
+          </a>
+        </div>
+      </div>
+
+      <div class="w3-padding-16 w3-border-bottom">
+        <div class="w3-bar-item w3-text-gray bm-caps">Administration</div>
+
+        <a
+          class="w3-bar-item w3-button w3-text-red"
+          href="#"
+          onclick="return w3_toggle_sub('admin-content')"
         >
           Content
           <i class="fa-solid fa-caret-right"></i>
         </a>
-        <div id="content" style="display: none">
-          <a href="bricksum.html" class="w3-bar-item w3-button">
-            <i class="fa-solid fa-globe"></i>
+        <div id="admin-content" style="display: none">
+          <a href="admin-bricksum.html" class="w3-bar-item w3-button">
+            <i class="bm-bricksum"></i>
             Bricksum
           </a>
-          <a href="placekit.html" class="w3-bar-item w3-button">
-            <i class="fa-solid fa-globe"></i>
-            Placekit
+          <a href="navadmin-coloursigation.html" class="w3-bar-item w3-button">
+            <i class="bm-colours"></i>
+            Colours
           </a>
-          <a href="qr.html" class="w3-bar-item w3-button">
-            <i class="fa-solid fa-globe"></i>
-            QR Codes
+          <a href="admin-parts.html" class="w3-bar-item w3-button">
+            <i class="bm-parts"></i>
+            Parts
           </a>
-          <a href="videokit.html" class="w3-bar-item w3-button">
-            <i class="fa-solid fa-globe"></i>
-            Videokit
+          <a href="admin-stores.html" class="w3-bar-item w3-button">
+            <i class="bm-stores"></i>
+            Stores
+          </a>
+          <a href="adin-bricksum.html" class="w3-bar-item w3-button">
+            <i class="bm-media"></i>
+            Media
           </a>
         </div>
+
         <a
           class="w3-bar-item w3-button w3-text-red"
           href="#"
-          onclick="return w3_toggle_sub('manage-city')"
+          onclick="return w3_toggle_sub('admin-finances')"
         >
-          Manage City
+          Finances
           <i class="fa-solid fa-caret-right"></i>
         </a>
-        <div id="manage-city" style="display: none">
-          <a href="power-grid.html" class="w3-bar-item w3-button">
-            <i class="fa-solid fa-globe"></i>
-            Power Grid
-          </a>
-          <a href="control-panel.html" class="w3-bar-item w3-button">
-            <i class="fa-solid fa-globe"></i>
-            Control Panel
-          </a>
-        </div>
-        <a href="timeline.html" class="w3-bar-item w3-button">Timeline</a>
-      </div>
-      <div class="w3-padding-16 w3-border-bottom">
-        <div class="w3-bar-item w3-text-gray bm-caps">Administration</div>
-        <a
-          class="w3-bar-item w3-button w3-text-red"
-          href="#"
-          onclick="return w3_toggle_sub('something')"
-        >
-          Something
-          <i class="fa-solid fa-caret-right"></i>
-        </a>
-        <div id="something" style="display: none">
-          <a href="gps.html" class="w3-bar-item w3-button">
-            <i class="fa-solid fa-globe"></i>
-            GPS
-          </a>
-          <a href="navigation.html" class="w3-bar-item w3-button">
-            <i class="fa-solid fa-globe"></i>
-            Navigation
-          </a>
-          <a href="roadview.html" class="w3-bar-item w3-button">
-            <i class="fa-solid fa-globe"></i>
-            Road View
-          </a>
-          <a href="tracks.html" class="w3-bar-item w3-button">
-            <i class="fa-solid fa-globe"></i>
-            Tracks
-          </a>
-          <a href="trains.html" class="w3-bar-item w3-button">
-            <i class="fa-solid fa-globe"></i>
-            Trains
+        <div id="admin-finances" style="display: none">
+          <a href="adin-bricksum.html" class="w3-bar-item w3-button">
+            <i class="bm-crypto"></i>
+            Crypto
           </a>
         </div>
       </div>
@@ -355,18 +348,45 @@
           <div class="w3-row">
             <div class="w3-col s6">
               <p style="margin-block-end: 8px; margin-block-start: 8px">
-                <i class="fa-solid fa-city"></i> Change City
+                <i class="fa-solid fa-city"></i> Select a City
               </p>
             </div>
             <div class="w3-col s6 w3-right-align"></div>
           </div>
         </header>
         <div class="w3-container">
-          <h2>Modal Title</h2>
-          <p>Some text..</p>
-          <p>Some text..</p>
+          <table class="w3-table w3-bordered w3-striped w3-margin-bottom">
+            <tr>
+              <th class="bm-table-icon"></th>
+              <th>Name</th>
+              <th class="bm=table-icon"></th>
+            </tr>
+            <tr>
+              <td><i class="fa-solid fa-check"></i></td>
+              <td><a href="select.html">Smart City</a></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><a href="select.html">Metropolis of Cannon</a></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><a href="select.html">Boomingville</a></td>
+              <td></td>
+            </tr>
+          </table>
         </div>
         <footer class="w3-container w3-border-top w3-right-align w3-padding">
+          <a class="w3-button w3-white w3-border" href="city-new.html">
+            <i class="fa-solid fa-list"></i>
+            Manage Cities
+          </a>
+          <a class="w3-button w3-white w3-border" href="city-new.html">
+            <i class="fa-solid fa-plus"></i>
+            Create City
+          </a>
           <button
             class="w3-button w3-white w3-border"
             onclick="close_modal('city');"
@@ -388,44 +408,93 @@
       class="w2-container w3-auto w3-padding"
       style="width: 100%; max-width: 992px"
     >
-      <h1>Welcome!</h1>
+      <h1 class="w3-margin-top w3-margin-bottom">Welcome!</h1>
       <p>
         You are logged in as
         <img src="/images/profile.jpg" style="height: 25px" class="w3-circle" />
-        <a href="/account.php"> Adam Thomas</a>
-        working on the
+        <a href="/account.html"> Adam Thomas</a>
+        working on
         <i class="fa-solid fa-city"></i>
         <a href="">Smart City</a>.
       </p>
       <hr />
-      <h3>Quick Access</h3>
+      <h3 class="w3-margin-top w3-margin-bottom">Quick Access</h3>
       <div
         class="w3-row-padding"
         style="margin-left: -16px; margin-right: -16px"
       >
-        <div class="w3-third">
-          <div
-            style="height: 100px"
-            class="w3-card w3-container w3-margin-bottom"
-          >
-            <p>w3-card</p>
+        <div class="w3-quarter">
+          <div class="w3-card w3-container w3-margin-bottom w3-padding-24">
+            <a href="roadview.html"> <i class="bm-roadview"></i> Roadview</a>
           </div>
         </div>
-        <div class="w3-third">
-          <div
-            style="height: 100px"
-            class="w3-card w3-container w3-margin-bottom"
-          >
-            <p>w3-card-2</p>
+        <div class="w3-quarter">
+          <div class="w3-card w3-container w3-margin-bottom w3-padding-24">
+            <a href="brix.html"> <i class="bm-brix"></i> Brix</a>
           </div>
         </div>
-        <div class="w3-third">
-          <div
-            style="height: 100px"
-            class="w3-card w3-container w3-margin-bottom"
-          >
-            <p>w3-card-4</p>
+        <div class="w3-quarter">
+          <div class="w3-card w3-container w3-margin-bottom w3-padding-24">
+            <a href="timeline.html"><i class="bm-timeline"></i> Timeline</a>
           </div>
+        </div>
+
+        <div class="w3-quarter">
+          <div class="w3-card w3-container w3-margin-bottom w3-padding-24">
+            <a href="flow.html"> <i class="bm-flow"></i> Flow</a>
+          </div>
+        </div>
+        <div class="w3-quarter">
+          <div class="w3-card w3-container w3-margin-bottom w3-padding-24">
+            <a href="radio-station.html">
+              <i class="bm-radio-station"></i> Radio Station
+            </a>
+          </div>
+        </div>
+        <div class="w3-quarter">
+          <div class="w3-card w3-container w3-margin-bottom w3-padding-24">
+            <a href="train.html"><i class="bm-train"></i> Train</a>
+          </div>
+        </div>
+        <div class="w3-quarter">
+          <div class="w3-card w3-container w3-margin-bottom w3-padding-24">
+            <a href="tracks.html"> <i class="bm-tracks"></i> Tracks </a>
+          </div>
+        </div>
+        <div class="w3-quarter">
+          <div class="w3-card w3-container w3-margin-bottom w3-padding-24">
+            <a href="brick-overflow.html">
+              <i class="bm-brick-overflow"></i> BrickOverflow
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+      <h3 class="w3-margin-top w3-margin-bottom">Tools</h3>
+      <div
+        class="w3-row-padding"
+        style="margin-left: -16px; margin-right: -16px"
+      >
+        <div class="w3-quarter">
+          <a href="https://branding.brickmmo.com">
+            <img src="/images/screenshot-branding.png" class="w3-image" />
+          </a>
+        </div>
+        <div class="w3-quarter">
+          <a href="https://branding.brickmmo.com">
+            <img src="/images/screenshot-branding.png" class="w3-image" />
+          </a>
+        </div>
+        <div class="w3-quarter">
+          <a href="https://branding.brickmmo.com">
+            <img src="/images/screenshot-branding.png" class="w3-image" />
+          </a>
+        </div>
+        <div class="w3-quarter">
+          <a href="https://branding.brickmmo.com">
+            <img src="/images/screenshot-branding.png" class="w3-image" />
+          </a>
         </div>
       </div>
     </main>

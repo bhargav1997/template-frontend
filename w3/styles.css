@@ -34,6 +34,7 @@ a:active,
 a:visited,
 a:hover {
   color: #ff5b00 !important;
+  text-decoration: none !important;
 }
 
 a.w3-text-red:link,
@@ -41,6 +42,7 @@ a.w3-text-red:active,
 a.w3-text-red:visited,
 a.w3-text-red:hover {
   color: #ff0000 !important;
+  text-decoration: none !important;
 }
 
 .bm-caps {
@@ -51,4 +53,8 @@ a.w3-text-red:hover {
   margin-bottom: 0;
   margin-block-start: 0;
   margin-block-end: 0;
+}
+
+.bm-table-icon {
+  width: 15px;
 }
