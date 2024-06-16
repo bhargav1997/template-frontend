@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome | BrickMMO Console</title>
+    <title>Dashboard | Bricksum | BrickMMO Console</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
     <link rel="stylesheet" href="styles.css" />
     <link
@@ -190,8 +190,11 @@
           Students
           <i class="fa-solid fa-caret-right"></i>
         </a>
-        <div id="students" style="display: none">
-          <a href="brick-overflow.html" class="w3-bar-item w3-button">
+        <div id="students" style="display: block">
+          <a
+            href="brick-overflow.html"
+            class="w3-bar-item w3-button bm-selected"
+          >
             <i class="bm-brick-overflow"></i>
             Brick Overflow
           </a>
@@ -260,6 +263,21 @@
             Crypto
           </a>
         </div>
+
+        <a
+          class="w3-bar-item w3-button w3-text-red"
+          href="#"
+          onclick="return w3_toggle_sub('tools')"
+        >
+          Tools
+          <i class="fa-solid fa-caret-right"></i>
+        </a>
+        <div id="tools" style="display: none">
+          <a href="uptime.html" class="w3-bar-item w3-button">
+            <i class="bm-uptime"></i>
+            Uptime
+          </a>
+        </div>
       </div>
 
       <div class="w3-padding-16 w3-border-bottom">
@@ -310,6 +328,82 @@
             Crypto
           </a>
         </div>
+
+        <a
+          class="w3-bar-item w3-button w3-text-red"
+          href="#"
+          onclick="return w3_toggle_sub('admin-tools')"
+        >
+          Tools
+          <i class="fa-solid fa-caret-right"></i>
+        </a>
+        <div id="admin-tools" style="display: none">
+          <a href="adin-github.html" class="w3-bar-item w3-button">
+            <i class="bm-github"></i>
+            GitHub Scanner
+          </a>
+          <a href="adin-stats.html" class="w3-bar-item w3-button">
+            <i class="bm-stats"></i>
+            Stats
+          </a>
+          <a href="adin-uptime.html" class="w3-bar-item w3-button">
+            <i class="bm-uptime"></i>
+            Uptime
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- SUB NAV -->
+
+    <nav
+      class="w3-sidebar w3-bar-block w3-border-right"
+      id="sidebar"
+      style="width: 100%; max-width: 240px; z-index: 100"
+    >
+      <div class="w3-padding-16 w3-border-bottom">
+        <div class="w3-bar-item w3-text-gray bm-caps">
+          <i class="bm-bricksum"></i> Bricksum
+        </div>
+      </div>
+
+      <div class="w3-padding-16 w3-border-bottom">
+        <a class="w3-bar-item w3-button w3-text-red" href="admin-bricksum.html">
+          <i class="fa-solid fa-gauge"></i>
+          Dashboard
+        </a>
+        <a
+          class="w3-bar-item w3-button w3-text-red bm-selected"
+          href="admin-bricksum-modify.html"
+        >
+          <i class="fa-solid fa-pen-to-square"></i>
+          Modify Word List
+        </a>
+      </div>
+      <div class="w3-padding-16 w3-border-bottom">
+        <a
+          class="w3-bar-item w3-button w3-text-orange"
+          href="admin-bricksum.html"
+        >
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          Visit Bricksum App
+        </a>
+      </div>
+      <div class="w3-padding-16 w3-border-bottom">
+        <a
+          class="w3-bar-item w3-button w3-text-orange"
+          href="admin-bricksum.html"
+        >
+          <i class="fa-regular fa-file-lines"></i>
+          Uptime Full Report
+        </a>
+        <a
+          class="w3-bar-item w3-button w3-text-orange"
+          href="admin-bricksum.html"
+        >
+          <i class="fa-regular fa-chart-bar"></i>
+          Stats Full Report
+        </a>
       </div>
     </nav>
 
@@ -382,7 +476,7 @@
           </table>
         </div>
         <footer class="w3-container w3-border-top w3-right-align w3-padding">
-          <a class="w3-button w3-white w3-border" href="city-new.html">
+          <a class="w3-button w3-white w3-border" href="cities.html">
             <i class="fa-solid fa-list"></i>
             Manage Cities
           </a>
@@ -648,104 +742,35 @@
 
     <!-- CONTENT -->
 
-    <main
-      class="w2-container w3-auto w3-padding"
-      style="width: 100%; max-width: 992px"
-    >
-      <h1 class="w3-margin-top w3-margin-bottom">Welcome!</h1>
-      <p>
-        You are logged in as
-        <img src="/images/profile.jpg" style="height: 25px" class="w3-circle" />
-        <a href="/account.html"> Adam Thomas</a>
-        working on
-        <i class="fa-solid fa-city"></i>
-        <a href="city.html">Smart City</a>.
-      </p>
-      <hr />
-      <h3 class="w3-margin-top w3-margin-bottom">Quick Access</h3>
-      <div
-        class="w3-row-padding"
-        style="margin-left: -16px; margin-right: -16px"
+    <div style="margin-left: 240px">
+      <main
+        class="w2-container w3-auto w3-padding"
+        style="width: 100%; max-width: 992px"
       >
-        <div class="w3-quarter">
-          <div class="w3-card w3-container w3-margin-bottom w3-padding-24">
-            <a href="roadview.html"> <i class="bm-roadview"></i> Roadview</a>
-          </div>
-        </div>
-        <div class="w3-quarter">
-          <div class="w3-card w3-container w3-margin-bottom w3-padding-24">
-            <a href="brix.html"> <i class="bm-brix"></i> Brix</a>
-          </div>
-        </div>
-        <div class="w3-quarter">
-          <div class="w3-card w3-container w3-margin-bottom w3-padding-24">
-            <a href="timeline.html"><i class="bm-timeline"></i> Timeline</a>
-          </div>
-        </div>
-
-        <div class="w3-quarter">
-          <div class="w3-card w3-container w3-margin-bottom w3-padding-24">
-            <a href="flow.html"> <i class="bm-flow"></i> Flow</a>
-          </div>
-        </div>
-        <div class="w3-quarter">
-          <div class="w3-card w3-container w3-margin-bottom w3-padding-24">
-            <a href="radio-station.html">
-              <i class="bm-radio-station"></i> Radio Station
-            </a>
-          </div>
-        </div>
-        <div class="w3-quarter">
-          <div class="w3-card w3-container w3-margin-bottom w3-padding-24">
-            <a href="train.html"><i class="bm-train"></i> Train</a>
-          </div>
-        </div>
-        <div class="w3-quarter">
-          <div class="w3-card w3-container w3-margin-bottom w3-padding-24">
-            <a href="tracks.html"> <i class="bm-tracks"></i> Tracks </a>
-          </div>
-        </div>
-        <div class="w3-quarter">
-          <div class="w3-card w3-container w3-margin-bottom w3-padding-24">
-            <a href="brick-overflow.html">
-              <i class="bm-brick-overflow"></i> BrickOverflow
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <hr />
-      <h3 class="w3-margin-top w3-margin-bottom">Tools</h3>
-      <div
-        class="w3-row-padding"
-        style="margin-left: -16px; margin-right: -16px"
-      >
-        <div class="w3-quarter w3-center">
-          <a href="https://branding.brickmmo.com">
-            <img src="/images/screenshot-branding.png" class="w3-image" />
-            Branding
-          </a>
-        </div>
-        <div class="w3-quarter w3-center">
-          <a href="https://cdn.brickmmo.com">
-            <img src="/images/screenshot-cdn.png" class="w3-image" />
-            CDN
-          </a>
-        </div>
-        <div class="w3-quarter w3-center">
-          <a href="https://fonticons.brickmmo.com">
-            <img src="/images/screenshot-branding.png" class="w3-image" />
-            FontIcons
-          </a>
-        </div>
-        <div class="w3-quarter w3-center">
-          <a href="https://fonticmediaons.brickmmo.com">
-            <img src="/images/screenshot-branding.png" class="w3-image" />
-            Media
-          </a>
-        </div>
-      </div>
-    </main>
+        <h1 class="w3-margin-top w3-margin-bottom">
+          <img
+            src="https://cdn.brickmmo.com/icons@1.0.0/bricksum.png"
+            height="50"
+            style="vertical-align: top"
+          />
+          Bricksum
+        </h1>
+        <p><a href="admin-bricksum.html">Dashboard</a> / Modify Word List</p>
+        <hr />
+        <h3>Modify Word List</h3>
+        <form method="post" onsubmit="return validateForgotForm();" novalidate>
+          <textarea class="w3-input w3-border" name="words" rows="5">
+brick, block, plate, tile, slope, wedge, corner, arch, beam, panel, fence, bar, stud, baseplate, grille, pillar</textarea
+          >
+          <button
+            class="w3-block w3-btn w3-orange w3-text-white w3-margin-bottom w3-margin-top"
+          >
+            <i class="fa-solid fa-save"></i>
+            Save Word List
+          </button>
+        </form>
+      </main>
+    </div>
 
     <script
       src="https://kit.fontawesome.com/a74f41de6e.js"
