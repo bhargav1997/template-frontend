@@ -59,7 +59,7 @@
 
     <nav
       class="w3-bar w3-border-bottom w3-padding w3-white w3-top"
-      style="position: sticky; z-index: 102"
+      style="position: sticky; z-index: 110; height: 58px"
     >
       <div class="w3-row">
         <div class="w3-col s6">
@@ -128,7 +128,14 @@
     <nav
       class="w3-sidebar w3-bar-block w3-border-right"
       id="sidebar"
-      style="width: 100%; max-width: 250px; left: -250px; z-index: 101"
+      style="
+        width: 100%;
+        max-width: 250px;
+        left: -250px;
+        z-index: 109;
+        top: 0px;
+        padding-top: 58px;
+      "
     >
       <div class="w3-padding-16 w3-border-bottom">
         <a href="dashboard.html" class="w3-bar-item w3-button">
@@ -190,7 +197,7 @@
           Students
           <i class="fa-solid fa-caret-right"></i>
         </a>
-        <div id="students" style="display: block">
+        <div id="students" style="display: none">
           <a
             href="brick-overflow.html"
             class="w3-bar-item w3-button bm-selected"
@@ -289,10 +296,13 @@
           onclick="return w3_toggle_sub('admin-content')"
         >
           Content
-          <i class="fa-solid fa-caret-right"></i>
+          <i class="fa-solid fa-caret-down"></i>
         </a>
-        <div id="admin-content" style="display: none">
-          <a href="admin-bricksum.html" class="w3-bar-item w3-button">
+        <div id="admin-content" style="display: block">
+          <a
+            href="admin-bricksum.html"
+            class="w3-bar-item w3-button bm-selected"
+          >
             <i class="bm-bricksum"></i>
             Bricksum
           </a>
@@ -358,8 +368,14 @@
 
     <nav
       class="w3-sidebar w3-bar-block w3-border-right"
-      id="sidebar"
-      style="width: 100%; max-width: 240px; z-index: 100"
+      id="sidebar-sub"
+      style="
+        width: 100%;
+        max-width: 240px;
+        z-index: 108;
+        top: 0px;
+        padding-top: 58px;
+      "
     >
       <div class="w3-padding-16 w3-border-bottom">
         <div class="w3-bar-item w3-text-gray bm-caps">
