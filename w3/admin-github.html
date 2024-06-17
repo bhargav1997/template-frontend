@@ -363,7 +363,7 @@
     >
       <div class="w3-padding-16 w3-border-bottom">
         <div class="w3-bar-item w3-text-gray bm-caps">
-          <i class="bm-bricksum"></i> Bricksum
+          <i class="bm-bricksum"></i> GitHub Scanner
         </div>
       </div>
 
@@ -377,29 +377,20 @@
         </a>
         <a
           class="w3-bar-item w3-button w3-text-red"
-          href="admin-bricksum-modify.html"
+          href="admin-github-results.html"
         >
-          <i class="fa-solid fa-pen-to-square"></i>
-          Modify Word List
+          <i class="fa-solid fa-magnifying-glass-chart"></i>
+          Scan Results
+        </a>
+        <a
+          class="w3-bar-item w3-button w3-text-red"
+          href="admin-github-scan.html"
+        >
+          <i class="fa-solid fa-magnifying-glass-arrow-right"></i>
+          Rescan GitHub
         </a>
       </div>
       <div class="w3-padding-16 w3-border-bottom">
-        <a
-          class="w3-bar-item w3-button w3-text-orange"
-          href="https://bricksum.brickmmo.com"
-        >
-          <i class="fa-solid fa-arrow-up-right-from-square"></i>
-          Visit Bricksum App
-        </a>
-      </div>
-      <div class="w3-padding-16 w3-border-bottom">
-        <a
-          class="w3-bar-item w3-button w3-text-orange"
-          href="admin-bricksum.html"
-        >
-          <i class="fa-regular fa-file-lines"></i>
-          Uptime Full Report
-        </a>
         <a
           class="w3-bar-item w3-button w3-text-orange"
           href="admin-bricksum.html"
@@ -752,74 +743,114 @@
       >
         <h1 class="w3-margin-top w3-margin-bottom">
           <img
-            src="https://cdn.brickmmo.com/icons@1.0.0/bricksum.png"
+            src="https://cdn.brickmmo.com/icons@1.0.0/brix.png"
             height="50"
             style="vertical-align: top"
           />
-          Bricksum
+          GitHub Scanner
         </h1>
         <p>
-          Paragraphs Generated: <span class="w3-tag w3-blue">41</span> Sentences
-          Generated: <span class="w3-tag w3-blue">154</span> Words Generated:
-          <span class="w3-tag w3-blue">1324</span>
+          Last Scan: <span class="w3-tag w3-blue">43 Days Ago</span> Total
+          Flags: <span class="w3-tag w3-blue">12</span>
         </p>
         <hr />
-        <h2>Bricksum Word List</h2>
-        <div class="w3-container w3-border w3-padding-16 w3-margin-bottom">
-          <span class="w3-tag w3-green w3-round w3-margin-bottom w3-padding">
-            brick
-          </span>
-          <span class="w3-tag w3-green w3-round w3-margin-bottom w3-padding">
-            block
-          </span>
-          <span class="w3-tag w3-green w3-round w3-margin-bottom w3-padding">
-            plate
-          </span>
-          <span class="w3-tag w3-green w3-round w3-margin-bottom w3-padding">
-            tile
-          </span>
-          <span class="w3-tag w3-green w3-round w3-margin-bottom w3-padding">
-            slope
-          </span>
-          <span class="w3-tag w3-green w3-round w3-margin-bottom w3-padding">
-            wedge
-          </span>
-          <span class="w3-tag w3-green w3-round w3-margin-bottom w3-padding">
-            corner
-          </span>
-          <span class="w3-tag w3-green w3-round w3-margin-bottom w3-padding">
-            arch
-          </span>
-          <span class="w3-tag w3-green w3-round w3-margin-bottom w3-padding">
-            beam
-          </span>
-          <span class="w3-tag w3-green w3-round w3-margin-bottom w3-padding">
-            panel
-          </span>
-          <span class="w3-tag w3-green w3-round w3-margin-bottom w3-padding">
-            fence
-          </span>
-          <span class="w3-tag w3-green w3-round w3-margin-bottom w3-padding">
-            bar
-          </span>
-          <span class="w3-tag w3-green w3-round w3-margin-bottom w3-padding">
-            stud
-          </span>
-          <span class="w3-tag w3-green w3-round w3-margin-bottom w3-padding">
-            baseplate
-          </span>
-          <span class="w3-tag w3-green w3-round w3-margin-bottom w3-padding">
-            grille
-          </span>
-          <span class="w3-tag w3-green w3-round w3-margin-bottom w3-padding">
-            pillar
-          </span>
+        <h2>Next Five</h2>
+
+        <div
+          class="w3-row-padding"
+          style="margin-left: -16px; margin-right: -16px"
+        >
+          <div class="w3-third">
+            <div class="w3-card w3-container w3-margin-bottom w3-padding-24">
+              <a href="https://github.com/BrickMMO/cdn">
+                <i class="fa-brands fa-github"></i> /BrickMMO/cdn</a
+              >
+              <div class="w3-margin-top w3-margin-bottom">
+                <span class="w3-tag w3-black">Incomplete README.md</span>
+                <span class="w3-tag w3-black">+2</span>
+              </div>
+              <a
+                href="admin-github-results.html"
+                class="w3-button w3-white w3-border"
+              >
+                <i class="fa-solid fa-magnifying-glass"></i> Details
+              </a>
+            </div>
+          </div>
+          <div class="w3-third">
+            <div class="w3-card w3-container w3-margin-bottom w3-padding-24">
+              <a href="https://github.com/BrickMMO/branding">
+                <i class="fa-brands fa-github"></i> /BrickMMO/branding</a
+              >
+              <div class="w3-margin-top w3-margin-bottom">
+                <span class="w3-tag w3-black">Missing Favicon</span>
+              </div>
+              <a
+                href="admin-github-results.html"
+                class="w3-button w3-white w3-border"
+              >
+                <i class="fa-solid fa-magnifying-glass"></i> Details
+              </a>
+            </div>
+          </div>
+          <div class="w3-third">
+            <div class="w3-card w3-container w3-margin-bottom w3-padding-24">
+              <a href="https://github.com/BrickMMO/cdn">
+                <i class="fa-brands fa-github"></i> /BrickMMO/pixelate-v1</a
+              >
+              <div class="w3-margin-top w3-margin-bottom">
+                <span class="w3-tag w3-black">Incomplete README.md</span>
+                <span class="w3-tag w3-black">+1</span>
+              </div>
+              <a
+                href="admin-github-results.html"
+                class="w3-button w3-white w3-border"
+              >
+                <i class="fa-solid fa-magnifying-glass"></i> Details
+              </a>
+            </div>
+          </div>
+          <div class="w3-third">
+            <div class="w3-card w3-container w3-margin-bottom w3-padding-24">
+              <a href="https://github.com/BrickMMO/uptime-v1">
+                <i class="fa-brands fa-github"></i> /BrickMMO/uptime-v1</a
+              >
+              <div class="w3-margin-top w3-margin-bottom">
+                <span class="w3-tag w3-black">Missing .gitignore</span>
+              </div>
+              <a
+                href="admin-github-results.html"
+                class="w3-button w3-white w3-border"
+              >
+                <i class="fa-solid fa-magnifying-glass"></i> Details
+              </a>
+            </div>
+          </div>
+          <div class="w3-third">
+            <div class="w3-card w3-container w3-margin-bottom w3-padding-24">
+              <a href="https://github.com/codeadamca/cdn">
+                <i class="fa-brands fa-github"></i> /codeadamca/wic</a
+              >
+              <div class="w3-margin-top w3-margin-bottom">
+                <span class="w3-tag w3-black">Missing favicon.ico</span>
+              </div>
+              <a
+                href="admin-github-results.html"
+                class="w3-button w3-white w3-border"
+              >
+                <i class="fa-solid fa-magnifying-glass"></i> Details
+              </a>
+            </div>
+          </div>
         </div>
         <a
-          href="admin-bricksum-modify.html"
+          href="admin-github-results.html"
           class="w3-button w3-white w3-border"
         >
-          <i class="fa-solid fa-pen-to-square"></i> Modify Word List
+          <i class="fa-solid fa-magnifying-glass-chart"></i> Scan Results
+        </a>
+        <a href="admin-github-scan.html" class="w3-button w3-white w3-border">
+          <i class="fa-solid fa-magnifying-glass-arrow-right"></i> Rescan GitHub
         </a>
         <hr />
 
@@ -827,20 +858,6 @@
           class="w3-row-padding"
           style="margin-left: -16px; margin-right: -16px"
         >
-          <div class="w3-half">
-            <div class="w3-card">
-              <header class="w3-container w3-grey w3-padding w3-text-white">
-                <i class="bm-brix"></i> Uptime Status
-              </header>
-              <div class="w3-container w3-padding">Uptime Status Summary</div>
-              <footer class="w3-container w3-border-top w3-padding">
-                <a href="#" class="w3-button w3-border w3-white">
-                  <i class="fa-regular fa-file-lines"></i>
-                  Full Report
-                </a>
-              </footer>
-            </div>
-          </div>
           <div class="w3-half">
             <div class="w3-card">
               <header class="w3-container w3-grey w3-padding w3-text-white">
