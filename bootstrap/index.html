@@ -1,11 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>index | BrickMMO</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
+
 <body>
-    
+  <!-- Nav-Bar -->
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm" style="max-height: 60px;">
+    <div class="container-lg">
+        <!-- Hamburger menu and logo -->
+        <div class="d-flex align-items-center">
+            <button class="navbar-toggler border-0 focus-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#sidebar" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle sidebar"
+                style="width: 40px; height: 40px;">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand ms-2" href="#">
+                <img src="/bootstrap/image/Education.png" alt="Logo" class="img-fluid"
+                    style="max-width: 24px; max-height: 24px;">
+            </a>
+        </div>
+
+        <!-- Links and button (visible on larger screens) -->
+        <div class="d-none d-lg-block">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Education</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Research</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Commissions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-warning ms-3" href="#" style="height: 40px;">Get Started</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="d-flex">
+    <!-- Sidebar -->
+    <div class="collapse d-lg-none bg-light border-end w-100 h-100vh" style="max-width: 250px;" id="sidebar">
+        <ul class="list-unstyled p-3">
+            <li><a href="#" class="nav-link">Home</a></li>
+            <li><a href="Education.html" class="nav-link">Education</a></li>
+            <li><a href="#" class="nav-link">Research</a></li>
+            <li><a href="#" class="nav-link">Commissions</a></li>
+        </ul>
+    </div>
+</div>
+
+  <!-- <div class="row grid gap-3 justify-content-evenly">
+  <div class="card g-col-6" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div>
+
+  <div class="card g-col-6 " style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div>
+  
+  <div class="card g-col-6 " style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div>
+</div> -->
+  <!-- Hero Banner -->
+  <div class="d-flex flex-row justify-content-between align-items-center p-5">
+    <!-- <p class="h1 display-3 fw-bold">BrickMMO</p> -->
+    <div>
+      <h1 class="text fw-bold display-3">BrickMMO</h1>
+      <h2 class="text-danger">A smart City Education Platform</h2>
+      <h4 class="text-muted">Built only using LEGO bricks</h4>
+      <p class="text-muted">View the <a href="#">Rules of BrickMMO and Expectations </a>.</p>
+      <a href="#" class="btn btn-outline-danger">Get Started</a>
+    </div>
+    <div>
+      <img class="img-fluid" src="image/screenshot3_resized.png">
+    </div>
+  </div>
+
+  <!-- Cards with no border -->
+
+  <div class="d-flex flex-row justify-content-evenly mt-5">
+    <div class="card  w-25 border border-0  text-center">
+      <div class="card-body">
+        <i class="fa-solid fa-image fs-2 pb-3 text-danger"></i>
+
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the
+          card's content.</p>
+        <a href="#" class="btn btn-danger">Go somewhere</a>
+      </div>
+    </div>
+
+    <div class="card w-25 border border-0 text-center">
+      <div class="card-body ">
+        <i class="fa-solid fa-image fs-2 pb-3 text-warning"></i>
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the
+          card's content.</p>
+        <a href="#" class="btn btn-danger">Go somewhere</a>
+      </div>
+    </div>
+
+    <div class="card w-25 border border-0 text-center">
+      <div class="card-body">
+        <i class="fa-solid fa-image fs-2 pb-3"></i> <!--fs-2 is for the size of the icon-->
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the
+          card's content.</p>
+        <a href="#" class="btn btn-danger">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Systems -->
+  <div class="text-center mt-5">
+    <h5 class="text-muted">SYSTEMS</h5>
+    <h1 class="text fw-bold display-3">Redeveloping Real World Systems</h1>
+    <img class="img-fluid" src="image/systems_resized.png">
+    <h2 class="text-muted">Integrate any of these systems into your BrickMMO smart city :</h2>
+
+  </div>
+  </br>
+  <!-- using flex-->
+  <div class="d-flex flex-row justify-content-evenly mt-5">
+    <div class="card  w-25  border-0 shadow p-3 mb-5 bg-body-tertiary rounded">
+      <div class="card-body">
+        <i class="fa-solid fa-satellite fs-2 pb-3 text-danger"></i>
+
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the
+          card's content.</p>
+      </div>
+    </div>
+
+    <div class="card w-25 border-0 shadow p-3 mb-5 bg-body-tertiary rounded">
+      <div class="card-body">
+        <i class="fa-solid fa-radio fs-2 pb-3 text-warning"></i>
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the
+          card's content.</p>
+      </div>
+    </div>
+
+    <div class="card w-25 border-0 shadow p-3 mb-5 bg-body-tertiary rounded">
+      <div class="card-body">
+        <i class="fa-solid fa-radio fs-2 pb-3"></i>
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the
+          card's content.</p>
+      </div>
+    </div>
+
+  </div>
+  <div class="text-center">
+    <div><a href="#" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">View
+        All Systems</a></div>
+    <div>
+      <h2 class="text-muted mt-3">Have an idea for a system?</h2>
+    </div>
+    <div  class="d-flex flex-row justify-content-center gap-3 mt-3 mb-5"> <a href="#" class="btn btn-danger">Go somewhere</a>
+    <a href="#" class="btn btn-danger">Go somewhere</a></div>
+  </div>
+<!-- footer -->
+<div class="text-center mt-11">
+  <h5 class="text-muted">PARTNERSHIP</h5>
+  <!-- <h2 class=" fw-bold display-4">BrickMMO is a Collaborative Project </h2> -->
+  <h1 class="text fw-bold display-3">BrickMMO is a Collaborative Project </h1>
+  <p class=" text-wrap fs-2 text-muted mt-3">BrickMMO is a ongoing collaboration between CodeAdam, HumberCollege, and BrevisRefero.</p>
+  <!-- <p class=" fs-2 text-muted mt-3">BrickMMO is a ongoing collaboration between CodeAdam, HumberCollege, and BrevisRefero.</p> -->
+
+
+</div>
+<div class="border border-left-0 border-right-0 border-bottom-0">
+  <p>hdsgfk</p>
+</div>
+
+
+
+
+
+  <!-- <div class="container px-4 text-center">
+  <div class="row gx-5">
+    <div class="col">
+     <div class="p-3">Custom column padding</div>
+    </div>
+    <div class="col">
+      <div class="p-3">Custom column padding</div>
+    </div>
+  </div>
+</div> -->
+  <!-- fontawesone -->
+  <script src="https://kit.fontawesome.com/db1e295bdd.js" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
