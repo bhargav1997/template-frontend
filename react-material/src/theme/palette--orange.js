@@ -1,8 +1,3 @@
-// Primary Orange: eb741d
-// Rollover Orange: d26a1e
-// Secondary Red: eb062c
-// Rollover Red: d8082b
-
 export const light = {
   alternate: {
     main: '#f7f9fc',

@@ -15,9 +15,7 @@ import ListItemAvatar from '@mui/material/ListItemAvatar';
 import SectionSubTitle from 'common/SectionSubTitle';
 import SectionEndButton from 'common/SectionEndButton';
 
-// import InfoIcon from '@mui/icons-material/Info';
 import HelpIcon from '@mui/icons-material/Help';
-// import ArticleIcon from '@mui/icons-material/Article';
 
 const Cultivate = () => {
   const theme = useTheme();

@@ -42,7 +42,7 @@ const Hero = () => {
          </Grid>
          <Grid item xs={12} md={6}>
             <Box height='100%' width='100%' display='flex' justifyContent='center' alignItems='center' maxHeight={600}>
-               <img src='/images/hero/education.png' width='100%' height='100%' alt='' />
+               <img src='https://fakeimg.pl/586x364?text=IMAGE+HERE' width='100%' height='100%' alt='' />
             </Box>
          </Grid>
       </Grid>
