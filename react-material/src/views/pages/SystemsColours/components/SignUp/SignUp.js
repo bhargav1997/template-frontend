@@ -80,7 +80,7 @@ const SignUp = () => {
          <Grid container spacing={6}>
             <Grid item container justifyContent={"center"} xs={12} md={6}>
                <Box height={"100%"} width={"100%"} maxWidth={{ xs: 500, md: "100%" }}>
-                  <img src='images/hero/sponsor.png' height={"100%"} width={"100%"} />
+                  <img src='images/hero/sponsor.png' height={"100%"} width={"100%"} alt='hero' />
                </Box>
             </Grid>
             <Grid item container alignItems={"center"} justifyContent={"center"} xs={12} md={6}>
