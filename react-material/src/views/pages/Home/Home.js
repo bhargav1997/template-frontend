@@ -2,7 +2,7 @@ import React from "react";
 import { useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Container from "common/Container";
-import { Partnership, Hero, Highlights } from "./components";
+import { Hero, Highlights } from "./components";
 import List from "../Portfolio/components/List";
 import SchoolIcon from "@mui/icons-material/School";
 import CodeIcon from "@mui/icons-material/Code";
@@ -45,7 +45,7 @@ const Home = () => {
                   captionLink='/new-project'
                   buttonText='Learn More'
                   buttonLink='/learn-more'
-                  imageSrc='/images/hero/planet.png'
+                  imageSrc='https://fakeimg.pl/1200x1200?text=IMAGE+HERE'
                   imageAlt='Custom Image Alt Text'
                />
             </Container>
