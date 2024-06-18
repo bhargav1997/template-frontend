@@ -19,15 +19,15 @@ const Grants = () => {
       <SectionTitle>Research Funding</SectionTitle>
       <SectionSubTitle>
         Custom Template has received funding from{' '}
-        <Link to="https://humber.ca/research/sotl" component={LinkRouter}>
+        <Link to="#" component={LinkRouter}>
           Cultivate
         </Link>
         ,{' '}
-        <Link to="https://codeadam.ca" component={LinkRouter}>
+        <Link to="#" component={LinkRouter}>
           Academic Plan Priority 3
         </Link>
         , and{' '}
-        <Link to="https://codeadam.ca" component={LinkRouter}>
+        <Link to="#" component={LinkRouter}>
           Greenfield
         </Link>{' '}
         funds.
