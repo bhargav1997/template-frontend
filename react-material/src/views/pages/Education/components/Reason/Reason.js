@@ -14,7 +14,7 @@ const Reason = () => {
   return (
     <Box>
       <SectionFlag>For Education</SectionFlag>
-      <SectionImage src="/images/map.png" />
+      <SectionImage src="https://fakeimg.pl/600x230?text=Image+Here" />
       <SectionTitle>
         Custom Template was Developed out of a Desire to Teach Code Differently
       </SectionTitle>

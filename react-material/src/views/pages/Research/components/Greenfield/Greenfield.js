@@ -64,7 +64,7 @@ const Greenfield = () => {
             </Grid>
             <Grid item container justifyContent='center' alignItems='center' xs={12} md={6}>
                <Box component={Card} boxShadow={4} height='100%' width='100%'>
-                  <Box component={CardMedia} height='100%' width='100%' minHeight={300} image='#' />
+                  <Box component={CardMedia} height='100%' width='100%' minHeight={300} image='https://fakeimg.pl/586x312?text=Image+Here' />
                </Box>
             </Grid>
          </Grid>
