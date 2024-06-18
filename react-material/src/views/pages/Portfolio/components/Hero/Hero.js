@@ -18,7 +18,7 @@ const Hero = () => {
               fontWeight: 700,
             }}
           >
-            Portfolio
+            Heading here
           </Typography>
           <Typography
             variant="h4"
@@ -28,7 +28,7 @@ const Hero = () => {
               fontWeight: 600,
             }}
           >
-            Custom interactive projects using LEGO&reg; bricks.
+            Custom Description here
           </Typography>
         </Box>
       </Grid>
@@ -42,7 +42,7 @@ const Hero = () => {
           maxHeight={600}
         >
           <img
-            src="/images/hero/portfolio.png"
+            src="https://fakeimg.pl/590x425?text=IMAGE+HERE"
             width="100%"
             height="100%"
             alt=""

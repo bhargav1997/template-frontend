@@ -86,11 +86,10 @@ const GetStarted = () => {
                <Grid item container alignItems={"center"} justifyContent={"center"} xs={12} md={6}>
                   <Box>
                      <Typography variant='h3' component={"h3"} align={isMd ? "left" : "center"} gutterBottom sx={{ fontWeight: 700 }}>
-                        Collaborate Soon
+                       Form Title Here
                      </Typography>
                      <Typography component='p' color='textSecondary' align={isMd ? "left" : "center"} marginBottom={2}>
-                        We will be inviting other developers to collaborate on the Custom Template project soon! Signup for our emails
-                        newsletter to be notified.
+                        Form Description text should be here.
                      </Typography>
                      <form noValidate autoComplete='off'>
                         <Box
@@ -150,10 +149,10 @@ const GetStarted = () => {
                               size='large'
                               height={54}
                               marginTop={{ xs: 2, sm: 0 }}
-                              marginLeft={{ sm: 2 }}
+                              marginLeft={{ sm: 0 }}
                               disabled={!email || error !== ""}
                               onClick={() => handleSubmitButton()}>
-                              Subscribe
+                              Button Text
                            </Box>
                         </Box>
                      </form>
