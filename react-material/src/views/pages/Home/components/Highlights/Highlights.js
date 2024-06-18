@@ -1,6 +1,5 @@
 import React from "react";
-import { Link as LinkRouter } from "react-router-dom";
-import Link from "@mui/material/Link";
+import { Link as LinkRouter } from "react-router-dom";   
 import { alpha, useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
@@ -8,40 +7,7 @@ import Avatar from "@mui/material/Avatar";
 import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
 
-import SchoolIcon from "@mui/icons-material/School";
-import CodeIcon from "@mui/icons-material/Code";
-import PhotoIcon from "@mui/icons-material/Photo";
-
-const Highlights = ({
-   highlights = [
-      {
-         title: "Built for Developers",
-         subtitle: "Custom Template is programmed so anyone can join in and build their own interactive smart city!",
-         link: { text: "Get Started", url: "/get-started" },
-         icon: <CodeIcon />,
-      },
-      {
-         title: "Designed for Education",
-         subtitle: (
-            <Typography>
-               70% of Custom Template code has been developed by students using a{" "}
-               <Link to='https://wic.codeadam.ca' variant='inherit' component={LinkRouter}>
-                  WIC
-               </Link>{" "}
-               framework.
-            </Typography>
-         ),
-         link: { text: "Education", url: "/education" },
-         icon: <SchoolIcon />,
-      },
-      {
-         title: "Custom Builds",
-         subtitle: "Custom interactive experiences built with LEGO® bricks and a whole lot of code!",
-         link: { text: "Portfolio", url: "/portfolio" },
-         icon: <PhotoIcon />,
-      },
-   ],
-}) => {
+const Highlights = ({ highlights = [] }) => {
    const theme = useTheme();
 
    return (

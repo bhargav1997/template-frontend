@@ -15,19 +15,19 @@ const Home = () => {
       {
          title: "Custom Title 1",
          subtitle: "Custom subtitle text 1.",
-         link: { text: "Custom Link 1", url: "/custom-link-1" },
+         link: { text: "Custom Link 1", url: "#" },
          icon: <CodeIcon />,
       },
       {
          title: "Custom Title 2",
          subtitle: "Custom subtitle text 2.",
-         link: { text: "Custom Link 2", url: "/custom-link-2" },
+         link: { text: "Custom Link 2", url: "#" },
          icon: <PhotoIcon />,
       },
       {
          title: "Custom Title 3",
          subtitle: "Custom subtitle text 3.",
-         link: { text: "Custom Link 3", url: "/custom-link-2" },
+         link: { text: "Custom Link 3", url: "#" },
          icon: <SchoolIcon />,
       },
    ];
@@ -37,14 +37,14 @@ const Home = () => {
          <Box bgcolor={theme.palette.alternate.main} position={"relative"}>
             <Container position='relative' zIndex={2}>
                <Hero
-                  title='My Custom Title'
-                  subtitle='My Custom Subtitle'
-                  description='Custom description text.'
+                  title='Home Page'
+                  subtitle='Your Subtitle Goes here.'
+                  description='Your description text goes here.'
                   caption='Check out the'
-                  captionLinkText='New Project'
-                  captionLink='/new-project'
-                  buttonText='Learn More'
-                  buttonLink='/learn-more'
+                  captionLinkText='Link to Text'
+                  captionLink='#'
+                  buttonText='Button'
+                  buttonLink='#'
                   imageSrc='https://fakeimg.pl/1200x1200?text=IMAGE+HERE'
                   imageAlt='Custom Image Alt Text'
                />

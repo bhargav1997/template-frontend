@@ -1,11 +1,29 @@
 export const portfolio = [
    {
-      media: "images/portfolio/humber.png",
-      title: "Greebled Logos",
-      subtitle: "Custom greebled logos.",
+      media: "https://fakeimg.pl/300x200?text=IMAGE+HERE",
+      title: "Title Here",
+      subtitle: "Your subtitle here",
       link: {
-         text: "Project Details",
-         url: "/portfolio-logos",
+         text: "Button",
+         url: "#",
+      },
+   },
+   {
+      media: "https://fakeimg.pl/300x200?text=IMAGE+HERE",
+      title: "Title Here",
+      subtitle: "Your subtitle here",
+      link: {
+         text: "Button",
+         url: "#",
+      },
+   },
+   {
+      media: "https://fakeimg.pl/300x200?text=IMAGE+HERE",
+      title: "Title Here",
+      subtitle: "Your subtitle here",
+      link: {
+         text: "Button",
+         url: "#",
       },
    },
 ];

@@ -7,18 +7,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 
-const Hero = ({
-   title = "Custom Template",
-   subtitle = "Interactive Educational Experiences",
-   description = "Built using LEGO® bricks.",
-   caption = "View the",
-   captionLinkText = "Smart City Project",
-   captionLink = "/portfolio-smart-city",
-   buttonText = "Get Started",
-   buttonLink = "/get-started",
-   imageSrc = "/images/hero/planet.png",
-   imageAlt = "Hero Image",
-}) => {
+const Hero = ({ title, subtitle, description, caption, captionLinkText, captionLink, buttonText, buttonLink, imageSrc, imageAlt }) => {
    return (
       <Grid container spacing={4}>
          <Grid item container alignItems={"center"} xs={12} md={6}>
