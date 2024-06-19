@@ -57,25 +57,6 @@ const TypographyComponent = () => {
             To modify the font family go to <code>public/index.html</code> and
             add your Google Font.
           </Typography>
-          <Box marginY={2}>
-            {renderCodeBlock(
-              `<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <title>
-      Webbee | UI Kit by Maccarian Agency.
-    </title>
-  </head>
-  <body>
-
-  </body>
-</html>`,
-              'html',
-            )}
-          </Box>
           <Typography
             sx={{
               '& code': {

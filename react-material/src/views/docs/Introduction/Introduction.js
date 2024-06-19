@@ -21,28 +21,6 @@ const Introduction = ({ themeMode = 'light' }) => {
           >
             Introduction
           </Typography>
-          <Typography
-            variant="h4"
-            align={'center'}
-            sx={{
-              fontWeight: 700,
-            }}
-          >
-            Webbee - multipurpose template and UI kit
-          </Typography>
-          <Box
-            component={'img'}
-            height={'100%'}
-            width={'100%'}
-            src={`https://assets.maccarianagency.com/screenshots/screens-masonry${
-              themeMode === 'dark' ? '--dark' : ''
-            }.png`}
-            alt="Webbee"
-            effect="blur"
-            maxWidth={'100%'}
-            marginY={4}
-            loading="lazy"
-          />
           <Box>
             <Typography gutterBottom>
               Webbe UI Kit is built with{' '}
@@ -69,11 +47,6 @@ const Introduction = ({ themeMode = 'light' }) => {
             </Typography>
             <Typography gutterBottom>
               The theme is ready to change to any style you want.
-            </Typography>
-            <Typography gutterBottom>
-              Webbee landing page examples can be used out of the box, but since
-              they’re built on flexible components, you can also create new
-              pages all your own with ease.
             </Typography>
             <Typography gutterBottom>
               Copy-paste a section here, a component there, switch up a few
