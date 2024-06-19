@@ -20,11 +20,11 @@ const Technology = () => {
 
   return (
     <Box>
-      <SectionFlag>Students</SectionFlag>
-      <SectionTitle>70% of Code was Written by Students</SectionTitle>
+       {/* Example: section flag "students" */}
+      <SectionFlag>Section flag</SectionFlag>
+      <SectionTitle>Section title goes here</SectionTitle>
       <SectionSubTitle>
-        Providing students with experience in many popular programming
-        languages, frameworks, and libraries.
+        Section subtitle goes here
       </SectionSubTitle>
 
       <Grid container spacing={2}>
@@ -43,16 +43,13 @@ const Technology = () => {
         <Grid item xs={12} md={6} container alignItems="center">
           <Box marginBottom={2}>
             <Typography variant="h4" fontWeight={700} gutterBottom>
-              Custom Template has 50+ systems
+              Header text
             </Typography>
             <Typography color="text.secondary" gutterBottom>
-              From documentation, to small online tools, admin control panels,
-              APIs, CLIs, and this website.
+              Description text 1
             </Typography>
             <Typography color="text.secondary" marginBottom={2}>
-              Systems use a variety of different technologies ensuring students
-              can contribute from day one, despite their previous coding
-              experience.
+            Description text 2
             </Typography>
             <Button
               variant="contained"
@@ -62,7 +59,7 @@ const Technology = () => {
               size="large"
               fullWidth={isMd ? false : true}
             >
-              View Systems
+              Button
             </Button>
           </Box>
         </Grid>

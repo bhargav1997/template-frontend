@@ -13,10 +13,13 @@ import { programs, images } from './data.js';
 const Test = () => {
   return (
     <Box>
-      <SectionFlag>Multi Disciplinary</SectionFlag>
-      <SectionTitle>Cross Program Collaboration</SectionTitle>
-      <SectionSubTitle>10+ programs contributing to Custom Template:</SectionSubTitle>
+      {/* Example: section flag "students" */}
+      <SectionFlag>Section flag</SectionFlag>
+      <SectionTitle>Section Title</SectionTitle>
+      <SectionSubTitle>Section Subtitle</SectionSubTitle>
+      {/* change the data under programs  in data.js to fill the button list with appropriate data */}
       <SectionButtonList data={programs} />
+      {/* change the data under images in data.js to fill the icons*/}
       <SectionImageList data={images} />
     </Box>
   );

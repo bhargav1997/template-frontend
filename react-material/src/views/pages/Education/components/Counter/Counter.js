@@ -18,22 +18,22 @@ const Counter = () => {
     <Grid container spacing={2}>
       {[
         {
-          number: 9,
-          title: 'Paid Positions',
-          subtitle: '9+ paid part time jobs created for students.',
+          number: "Number or key metrics",
+          title: 'Title for stat',
+          subtitle: 'Subtitle for stat',
           suffix: '+',
         },
         {
-          number: 70,
-          title: 'Student Contribution',
-          subtitle: '70% of Custom Template code was written by students.',
+          number: "Number or key metrics",
+          title:'Title for stat',
+          subtitle: 'Subtitle for stat',
           suffix: '%',
         },
         {
-          number: 3000,
-          title: 'Student Hours',
-          subtitle: '3000+ hours of student contributions.',
-          suffix: '+',
+          number: "Number or key metrics",
+          title: 'Title for stat',
+          subtitle: 'Subtitle for stat',
+          suffix: '%',
         },
       ].map((item, i) => (
         <Grid key={i} item xs={12} md={4}>

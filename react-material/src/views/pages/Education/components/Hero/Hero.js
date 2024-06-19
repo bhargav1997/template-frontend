@@ -19,7 +19,7 @@ const Hero = () => {
                   sx={{
                      fontWeight: 700,
                   }}>
-                  Education
+                  Education Page
                </Typography>
                <Typography
                   variant='h4'
@@ -28,15 +28,15 @@ const Hero = () => {
                   sx={{
                      fontWeight: 600,
                   }}>
-                  Custom Template is designed for education.
+                  Subtitle goes here.
                </Typography>
 
                <Typography variant='caption' component='p' color='textSecondary' sx={{ fontWeight: 400 }}>
                   View the{" "}
                   <Link component={LinkRouter} to='#'>
-                     Workplace Integrated Classroom (WIC)
+                     Link to text
                   </Link>{" "}
-                  learning framework.
+                  to know more.
                </Typography>
             </Box>
          </Grid>

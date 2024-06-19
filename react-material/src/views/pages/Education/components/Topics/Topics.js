@@ -10,8 +10,11 @@ import { topics } from './data.js';
 const Topics = () => {
   return (
     <Box>
-      <SectionFlag>Technology</SectionFlag>
-      <SectionImageList data={topics} folder="/images/topics/" />
+       {/* Example: section flag "students" */}
+      <SectionFlag>Section flag</SectionFlag>
+      {/* add icons array below or multiple images here */}
+      {/* refer the data.js file for refrence */}
+      <SectionImageList data={topics} folder="/images/topics/" /> 
     </Box>
   );
 };

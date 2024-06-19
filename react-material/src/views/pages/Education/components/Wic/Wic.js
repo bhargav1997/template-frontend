@@ -10,8 +10,7 @@ import Avatar from "@mui/material/Avatar";
 
 import ChairIcon from "@mui/icons-material/Chair";
 import TvIcon from "@mui/icons-material/Tv";
-import GroupsIcon from "@mui/icons-material/Groups";
-import WorkIcon from "@mui/icons-material/Work";
+
 
 import SectionFlag from "common/SectionFlag";
 import SectionTitle from "common/SectionTitle";
@@ -23,37 +22,33 @@ const Wic = () => {
 
    return (
       <Box>
-         <SectionFlag>Teaching Method</SectionFlag>
-         <SectionTitle>Workplace Integrated Classroom</SectionTitle>
+         {/* Example: section flag "teaching method" */}
+         <SectionFlag>Section flag</SectionFlag>
+         <SectionTitle>Title here</SectionTitle>
          <SectionSubTitle>
-            Providing students with a close to industry workplace experience while maintaining the comfort of the classroom.
+            subtitle here
          </SectionSubTitle>
 
          <Grid container spacing={2} marginY={3}>
             {[
+               // example:
+               // title: title of skill or Technology,
+               // subtitle: subtitle of skill or Technology,
+               // icon: icon of skill or Technology,
+               //the icons can be imported from @mui/icons-material
                {
-                  title: "Environment",
+                  title: "Skill title 1",
                   subtitle:
-                     "Students are treated more like new employees than students. Classes are longer to more closely resemble a full workday.",
+                     "Subtitle explaing the skill or Technology. You can add more here.",
                   icon: <ChairIcon />,
                },
                {
-                  title: "Delivery",
+                  title: "Skill title 1",
                   subtitle:
-                     "There are no lectures, assignments, homework, or tests. Students participate in stand up meetings and contribute to ongoing real projects.",
+                  "Subtitle explaing the skill or Technology. You can add more here.",
                   icon: <TvIcon />,
                },
-               {
-                  title: "Teamwork",
-                  subtitle: "Students participate in a variety of different teams as members and leaders. ",
-                  icon: <GroupsIcon />,
-               },
-               {
-                  title: "Learn by Doing",
-                  subtitle:
-                     "Students are taught by being assigned progressively harder and harder tasks in a variety of projects in different stages of development.",
-                  icon: <WorkIcon />,
-               },
+              
             ].map((item, i) => (
                <Grid key={i} item xs={12} md={6}>
                   <ListItem
@@ -93,7 +88,7 @@ const Wic = () => {
             ))}
          </Grid>
 
-         <SectionEndButton text='Read the White Paper' href='#' />
+         <SectionEndButton text='link button text here' href='#' />
       </Box>
    );
 };

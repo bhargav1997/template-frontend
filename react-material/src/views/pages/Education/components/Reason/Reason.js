@@ -13,15 +13,17 @@ import { concepts } from './data.js';
 const Reason = () => {
   return (
     <Box>
-      <SectionFlag>For Education</SectionFlag>
+      {/* Example: section flag "For Education" */}
+      <SectionFlag>Section flag</SectionFlag> 
       <SectionImage src="https://fakeimg.pl/600x230?text=Image+Here" />
       <SectionTitle>
-        Custom Template was Developed out of a Desire to Teach Code Differently
+        Section title goes here.
       </SectionTitle>
       <SectionSubTitle>
-        Providing students with a real world sandbox to apply:
+       Section subtitle goes here.
       </SectionSubTitle>
 
+      {/* Example: list of concepts */}
       <SectionList data={concepts} />
     </Box>
   );
