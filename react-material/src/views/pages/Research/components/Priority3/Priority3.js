@@ -1,11 +1,9 @@
 import React from "react";
-import { Link as LinkRouter } from "react-router-dom";
 
 import { useTheme } from "@mui/material/styles";
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import Box from "@mui/material/Box";
-import Link from "@mui/material/Box";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import List from "@mui/material/List";
 import Typography from "@mui/material/Typography";

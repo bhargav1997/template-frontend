@@ -2,7 +2,7 @@ import React from "react";
 import { alpha, useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Container from "common/Container";
-import { Hero, Counter, Priority3 } from "./components";
+import { Hero, Priority3 } from "./components";
 
 const Research = () => {
    const theme = useTheme();
