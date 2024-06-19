@@ -1,17 +1,17 @@
 export const collaborators = [
    {
-      title: "Code Adam",
-      image: "codeadam.jpg",
+      title: "Tech Innovators Inc.",
+      image: "techinnovators.jpg",
       url: "#",
    },
    {
-      title: "Humber College",
-      image: "humber.jpg",
+      title: "Global Education Network",
+      image: "globaleducation.jpg",
       url: "#",
    },
    {
-      title: "BrevisRefero",
-      image: "brevisrefero.jpg",
+      title: "Creative Solutions Ltd.",
+      image: "creativesolutions.jpg",
       url: "#",
    },
 ];

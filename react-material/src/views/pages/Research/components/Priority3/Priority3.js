@@ -19,9 +19,8 @@ import SectionSubTitle from "common/SectionSubTitle";
 import SectionEndButton from "common/SectionEndButton";
 
 import HelpIcon from "@mui/icons-material/Help";
-import ArticleIcon from "@mui/icons-material/Article";
 
-const Priority3 = () => {
+const Priority3 = ({ title, description, btnLinkTitle, btnTextDescription }) => {
    const theme = useTheme();
    const isMd = useMediaQuery(theme.breakpoints.up("md"), {
       defaultMatches: true,
@@ -32,38 +31,17 @@ const Priority3 = () => {
          <Grid container spacing={4} direction={isMd ? "row" : "column-reverse"}>
             <Grid item xs={12} md={6}>
                <Box marginBottom={3}>
-                  <SectionSubTitle align='left'>Academic Plan Priority 3</SectionSubTitle>
+                  <SectionSubTitle align='left'>{title}</SectionSubTitle>
                   <Typography component='p' color={"textSecondary"}>
-                     Empowering teaching and learning to push the boundaries of how to design and deliver the best learning experience for
-                     students.
+                     {description}
                   </Typography>
                </Box>
                <List disablePadding>
                   {[
                      {
                         icon: <HelpIcon />,
-                        title: "Research Question",
-                        subtitle: (
-                           <Typography fontSize='small'>
-                              Workplace Integrated Classroom: A Case-Study Review of a New Pedagogical Approach using a Smart City built
-                              with LEGO® Bricks
-                           </Typography>
-                        ),
-                     },
-                     {
-                        icon: <ArticleIcon />,
-                        title: "Publishings",
-                        subtitle: (
-                           <Box>
-                              <Typography fontSize='small'>
-                                 Read the{" "}
-                                 <Link to='#' component={LinkRouter} variant='inherit' color={theme.palette.primary.main}>
-                                    WIC White paper
-                                 </Link>
-                                 .
-                              </Typography>
-                           </Box>
-                        ),
+                        title: `${btnLinkTitle}`,
+                        subtitle: <Typography fontSize='small'>{btnTextDescription}</Typography>,
                      },
                   ].map((item, index) => (
                      <ListItem key={index} disableGutters alignItems='flex-start'>
@@ -80,7 +58,7 @@ const Priority3 = () => {
                      </ListItem>
                   ))}
                </List>
-               <SectionEndButton align='left' text='Fund Information' href='#'></SectionEndButton>
+               <SectionEndButton align='left' text='Button Text' href='#'></SectionEndButton>
             </Grid>
             <Grid item container justifyContent='center' alignItems='center' xs={12} md={6}>
                <Box component={Card} boxShadow={4} height='100%' width='100%'>

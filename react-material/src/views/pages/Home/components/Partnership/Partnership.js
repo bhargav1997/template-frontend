@@ -16,19 +16,19 @@ const Partnership = () => {
       <Box>
          <SectionTitle>Note on Our Collaborations</SectionTitle>
          <SectionSubTitle>
-            Our project thrives on the support and collaboration of various partners,
+            Our project flourishes through the invaluable support and collaboration of key partners,
             <br />
             including
             <Link to='#' component={LinkRouter}>
-               CodeAdam
+               Tech Innovators Inc.
             </Link>
             ,{" "}
             <Link to='#' component={LinkRouter}>
-               Humber College
+               Global Education Network
             </Link>
             , and{" "}
             <Link to='#' component={LinkRouter}>
-               BrevisRefero
+               Creative Solutions Ltd.
             </Link>
             .
          </SectionSubTitle>

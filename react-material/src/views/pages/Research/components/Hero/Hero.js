@@ -18,7 +18,7 @@ const Hero = () => {
                      sx={{
                         fontWeight: 700,
                      }}>
-                     Title here
+                     Page Heading here
                   </Typography>
                   <Typography
                      variant='h4'
