@@ -58,7 +58,7 @@ const Footer = () => {
                &copy; Custom Template. {year}. All rights reserved.
             </Typography>
             <Typography marginTop={1} align='center' variant='subtitle2' color='textSecondary'>
-               Custom Template is a trademark of Custom Template.
+               Custom Template is a trademark of BrickMmo.
             </Typography>
          </Grid>
       </Grid>
