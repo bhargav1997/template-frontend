@@ -14,23 +14,12 @@ import { collaborators } from "./data.js";
 const Partnership = () => {
    return (
       <Box>
-         <SectionTitle>Note on Our Collaborations</SectionTitle>
+         <SectionTitle>Section Title Here</SectionTitle>
          <SectionSubTitle>
-            Our project flourishes through the invaluable support and collaboration of key partners,
-            <br />
-            including
+            Section Subtitle Here, {' '}
             <Link to='#' component={LinkRouter}>
-               Tech Innovators Inc.
+               Link Here
             </Link>
-            ,{" "}
-            <Link to='#' component={LinkRouter}>
-               Global Education Network
-            </Link>
-            , and{" "}
-            <Link to='#' component={LinkRouter}>
-               Creative Solutions Ltd.
-            </Link>
-            .
          </SectionSubTitle>
 
          <SectionImageList data={collaborators} />
