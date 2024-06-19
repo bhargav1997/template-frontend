@@ -23,7 +23,7 @@ const Introduction = ({ themeMode = 'light' }) => {
           </Typography>
           <Box>
             <Typography gutterBottom>
-              Webbe UI Kit is built with{' '}
+              This template is built with{' '}
               <Link
                 underline={'hover'}
                 href={'https://mui.com/'}
