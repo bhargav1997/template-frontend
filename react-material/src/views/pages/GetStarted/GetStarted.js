@@ -80,13 +80,13 @@ const GetStarted = () => {
             <Grid container spacing={6}>
                <Grid item container justifyContent={"center"} xs={12} md={6}>
                   <Box height={"100%"} width={"100%"} maxWidth={{ xs: 500, md: "100%" }}>
-                     <img src='images/coming-soon.png' height={"100%"} width={"100%"} alt='' />
+                     <img src='https://fakeimg.pl/580x490?text=IMAGE+HERE' height={"100%"} width={"100%"} alt='' />
                   </Box>
                </Grid>
                <Grid item container alignItems={"center"} justifyContent={"center"} xs={12} md={6}>
                   <Box>
                      <Typography variant='h3' component={"h3"} align={isMd ? "left" : "center"} gutterBottom sx={{ fontWeight: 700 }}>
-                       Form Title Here
+                        Form Title Here
                      </Typography>
                      <Typography component='p' color='textSecondary' align={isMd ? "left" : "center"} marginBottom={2}>
                         Form Description text should be here.

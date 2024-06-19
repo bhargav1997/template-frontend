@@ -45,7 +45,7 @@ const Footer = () => {
 
                <Box display='flex' flexWrap='wrap' alignItems='center'>
                   <Box marginTop={1}>
-                     <Button variant='outlined' color='secondary' component={LinkRouter} to='#'>
+                     <Button variant='outlined' color='secondary' component={LinkRouter} to='/get-started'>
                         Get Started
                      </Button>
                   </Box>
