@@ -2,7 +2,7 @@ import React from "react";
 import { useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Container from "common/Container";
-import { Hero, Highlights } from "./components";
+import { Hero, Highlights, Partnership } from "./components";
 import List from "../Portfolio/components/List";
 import SchoolIcon from "@mui/icons-material/School";
 import CodeIcon from "@mui/icons-material/Code";
@@ -58,6 +58,11 @@ const Home = () => {
          <Box bgcolor={theme.palette.alternate.main}>
             <Container>
                <List />
+            </Container>
+         </Box>
+         <Box>
+            <Container>
+               <Partnership />
             </Container>
          </Box>
       </Box>

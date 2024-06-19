@@ -1,28 +1,28 @@
 export const portfolio = [
    {
       media: "https://fakeimg.pl/300x200?text=IMAGE+HERE",
-      title: "Title Here",
-      subtitle: "Your subtitle here",
+      title: "Innovative Design Solutions",
+      subtitle: "Crafting unique and modern designs",
       link: {
-         text: "Button",
+         text: "Learn More",
          url: "#",
       },
    },
    {
       media: "https://fakeimg.pl/300x200?text=IMAGE+HERE",
-      title: "Title Here",
-      subtitle: "Your subtitle here",
+      title: "Cutting-Edge Technology",
+      subtitle: "Implementing the latest tech trends",
       link: {
-         text: "Button",
+         text: "Explore",
          url: "#",
       },
    },
    {
       media: "https://fakeimg.pl/300x200?text=IMAGE+HERE",
-      title: "Title Here",
-      subtitle: "Your subtitle here",
+      title: "Efficient Project Management",
+      subtitle: "Delivering projects on time and within budget",
       link: {
-         text: "Button",
+         text: "Discover",
          url: "#",
       },
    },

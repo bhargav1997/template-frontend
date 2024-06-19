@@ -19,9 +19,9 @@ import { portfolio } from "./data.js";
 const List = () => {
    return (
       <Box>
-         <SectionFlag>Heading here</SectionFlag>
-         <SectionTitle>Custom Title here</SectionTitle>
-         <SectionSubTitle>Subtitle here</SectionSubTitle>
+         <SectionFlag>Our Projects</SectionFlag>
+         <SectionTitle>Explore Our Portfolio</SectionTitle>
+         <SectionSubTitle>Discover the range of our expertise and creativity</SectionSubTitle>
 
          <Grid container spacing={4} marginTop={3}>
             {portfolio.map((item, i) => (
